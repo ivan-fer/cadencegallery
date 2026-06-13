@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "title": "Política de privacidad",
+    "description": "Cómo Cadence Gallery trata (y no recolecta) tus datos en Cadence Metronome y Cadence Polypulse."
+  },
+  "title": "Política de privacidad",
+  "updatedLabel": "Última actualización",
+  "lastUpdated": "2026-06-13",
+  "intro": "Esta política explica cómo las aplicaciones de Cadence Gallery —Cadence Metronome y Cadence Polypulse— tratan tu información. La versión corta: no recolectamos nada. La versión larga está abajo.",
+  "sections": [
+    {
+      "heading": "Resumen",
+      "body": [
+        "Nuestras apps están hechas para funcionar enteramente en tu dispositivo. No recolectan, almacenan ni transmiten datos personales, no usan analítica ni publicidad, y no necesitan conexión a internet para funcionar."
+      ]
+    },
+    {
+      "heading": "Qué datos recolectamos",
+      "body": [
+        "Ninguno. No te pedimos crear una cuenta, no registramos quién sos ni cómo usás la app, y no enviamos información a ningún servidor —ni nuestro ni de terceros."
+      ]
+    },
+    {
+      "heading": "Dónde se guarda tu configuración",
+      "body": [
+        "Todo lo que configurás (tempos, presets, compases, temas, historial de práctica y preferencias) se guarda localmente en tu dispositivo, usando el almacenamiento propio de la app.",
+        "Si borrás la app, esos datos se borran con ella. No tenemos copia de nada, porque nunca salió de tu teléfono."
+      ]
+    },
+    {
+      "heading": "Analítica, publicidad y rastreo",
+      "body": [
+        "No incluimos herramientas de analítica, redes publicitarias, píxeles de seguimiento ni SDKs de terceros que recolecten datos. No hay perfiles, ni cookies, ni identificadores de rastreo."
+      ]
+    },
+    {
+      "heading": "Conexión a internet",
+      "body": [
+        "Las apps funcionan completamente sin conexión. No requieren internet para ninguna de sus funciones y no hacen llamadas de red en segundo plano."
+      ]
+    },
+    {
+      "heading": "Permisos del sistema",
+      "body": [
+        "Las apps usan los permisos mínimos necesarios para reproducir audio de forma confiable. Para que el metrónomo o el patrón rítmico puedan seguir sonando con la pantalla apagada o la app en segundo plano, usamos el permiso de reproducción de audio en segundo plano del sistema.",
+        "Nuestras apps no graban audio ni acceden al micrófono: el uso de audio es solo de salida (reproducir sonido), nunca de entrada. Tampoco usan cámara, ubicación, contactos ni ningún otro dato sensible."
+      ]
+    },
+    {
+      "heading": "Niños",
+      "body": [
+        "Las apps no están dirigidas específicamente a menores y, como no recolectan datos de nadie, tampoco recolectan datos de menores."
+      ]
+    },
+    {
+      "heading": "Cambios en esta política",
+      "body": [
+        "Si en el futuro alguna app cambia su forma de tratar los datos, actualizaremos esta página y su fecha de última actualización. Cualquier cambio relevante aparecerá acá antes de llegar a una nueva versión."
+      ]
+    }
+  ],
+  "contactHeading": "Contacto",
+  "contactBody": "Si tenés dudas sobre esta política o sobre la privacidad en nuestras apps, escribinos a",
+  "email": "contacto@cadencegallery.com"
+}

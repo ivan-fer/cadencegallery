@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "title": "Terms of Use",
+    "description": "Terms of use for the Cadence Gallery apps."
+  },
+  "title": "Terms of Use",
+  "updatedLabel": "Last updated",
+  "lastUpdated": "2026-06-13",
+  "intro": "By using the Cadence Gallery apps —Cadence Metronome and Cadence Polypulse— you agree to these terms. They're written to be clear and short, not to fill pages.",
+  "sections": [
+    {
+      "heading": "Using the apps",
+      "body": [
+        "We grant you permission to use our apps on your devices, for your personal use. The apps are provided as-is, with whatever features each version includes."
+      ]
+    },
+    {
+      "heading": "No warranties",
+      "body": [
+        "We build the apps with care and test them, but they're provided without warranties of any kind. We don't guarantee they'll be error-free or fit for a particular purpose. You use the apps at your own risk."
+      ]
+    },
+    {
+      "heading": "Limitation of liability",
+      "body": [
+        "To the extent permitted by law, Cadence Gallery is not liable for damages arising from the use of the apps.",
+        "A note about your hearing: these apps play sound and may be used with headphones. Mind the volume. Prolonged exposure to high volume can damage your hearing. Set the level to something comfortable and safe."
+      ]
+    },
+    {
+      "heading": "Intellectual property",
+      "body": [
+        "The Cadence Gallery name, the app names, the logos, the designs, and the content of the apps and this site belong to their authors. You may use the apps, but not copy, redistribute, or resell the software or the brand without permission."
+      ]
+    },
+    {
+      "heading": "Changes to the apps and these terms",
+      "body": [
+        "We may update the apps, add or remove features, and change these terms. When we do, we'll update this page and its date. Continuing to use the apps after a change means you accept the current terms."
+      ]
+    }
+  ],
+  "contactHeading": "Contact",
+  "contactBody": "If you have questions about these terms, email us at",
+  "email": "contacto@cadencegallery.com"
+}

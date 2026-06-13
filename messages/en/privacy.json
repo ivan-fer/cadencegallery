@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "title": "Privacy Policy",
+    "description": "How Cadence Gallery handles (and doesn't collect) your data in Cadence Metronome and Cadence Polypulse."
+  },
+  "title": "Privacy Policy",
+  "updatedLabel": "Last updated",
+  "lastUpdated": "2026-06-13",
+  "intro": "This policy explains how Cadence Gallery's apps —Cadence Metronome and Cadence Polypulse— handle your information. The short version: we don't collect anything. The long version is below.",
+  "sections": [
+    {
+      "heading": "Summary",
+      "body": [
+        "Our apps are built to run entirely on your device. They don't collect, store, or transmit personal data, they use no analytics or advertising, and they don't need an internet connection to work."
+      ]
+    },
+    {
+      "heading": "What data we collect",
+      "body": [
+        "None. We don't ask you to create an account, we don't track who you are or how you use the app, and we don't send information to any server —ours or anyone else's."
+      ]
+    },
+    {
+      "heading": "Where your settings live",
+      "body": [
+        "Everything you configure (tempos, presets, time signatures, themes, practice history, and preferences) is stored locally on your device, using the app's own storage.",
+        "If you delete the app, that data is deleted with it. We don't keep a copy of anything, because it never left your phone."
+      ]
+    },
+    {
+      "heading": "Analytics, ads, and tracking",
+      "body": [
+        "We don't include analytics tools, ad networks, tracking pixels, or third-party SDKs that collect data. There are no profiles, no cookies, and no tracking identifiers."
+      ]
+    },
+    {
+      "heading": "Internet connection",
+      "body": [
+        "The apps work fully offline. They don't require internet for any feature and make no background network calls."
+      ]
+    },
+    {
+      "heading": "System permissions",
+      "body": [
+        "The apps use the minimum permissions needed to play audio reliably. So that the metronome or rhythmic pattern can keep sounding while the screen is off or the app is in the background, we use the system's background audio playback permission.",
+        "Our apps do not record audio or access the microphone: audio is output only (playing sound), never input. They also don't use the camera, location, contacts, or any other sensitive data."
+      ]
+    },
+    {
+      "heading": "Children",
+      "body": [
+        "The apps aren't specifically directed at children and, since they collect no data from anyone, they collect no data from children either."
+      ]
+    },
+    {
+      "heading": "Changes to this policy",
+      "body": [
+        "If an app ever changes how it handles data, we'll update this page and its last-updated date. Any meaningful change will appear here before it ships in a new version."
+      ]
+    }
+  ],
+  "contactHeading": "Contact",
+  "contactBody": "If you have questions about this policy or about privacy in our apps, email us at",
+  "email": "contacto@cadencegallery.com"
+}

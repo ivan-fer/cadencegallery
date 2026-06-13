@@ -242,8 +242,8 @@ color de marca (componente `ScreenshotPlaceholder`), reemplazables cuando Iván 
 
 ## 7. Estado actual
 
-- **Fase activa**: **Fase 4 completada** ✅ (2026-06-13). Próximo: Fase 5 (políticas legales:
-  privacy y terms, drafts ES/EN) — pendiente de TODOs y confirmación.
+- **Fase activa**: **Fase 5 completada** ✅ (2026-06-13). Próximo: Fase 6 (guías iniciales,
+  2-3 por app) — pendiente de TODOs y confirmación.
 - **Completado**:
   - Descubrimiento (sección 11) y decisiones acordadas con Iván.
   - Fase 0: brand kit copiado a `public/` (favicon, manifest, `/brand/`), fuente a `src/fonts/`.
@@ -262,7 +262,18 @@ color de marca (componente `ScreenshotPlaceholder`), reemplazables cuando Iván 
     GuidesCta, PhoneShot). Namespaces `metronome.json`/`polypulse.json` ES/EN. Screenshots de
     Metronome convertidas a WebP en `public/screenshots/` (sharp, devDep). Polypulse con placeholders
     (faltan capturas reales). Validado claro/oscuro.
-- **Sigue**: Fase 5.
+  - Fase 5: políticas legales `/privacy` y `/terms` con contenido real (redactado por Claude,
+    revisión desde el sitio como en Fase 4). Modelo de datos en JSON estructurado
+    (`sections[]` con `heading` + `body[]` + `list?`), namespaces `privacy.json`/`terms.json`
+    ES/EN registrados en `src/i18n/request.ts`. Componente compartido
+    `src/components/legal/LegalDocument.tsx` (título + fecha de actualización en mono vía
+    `getFormatter` + `Prose`/`.prose-cadence` + contacto `mailto`). `generateMetadata` por página
+    (title/description desde `meta.*`). Permisos verificados contra los manifests reales: Metronome
+    usa `FOREGROUND_SERVICE(_MEDIA_PLAYBACK)` + `UIBackgroundModes: audio` (solo seguir sonando
+    en background), Polypulse sin permisos especiales; ninguna graba audio (audio solo de salida,
+    sin micrófono ni red). Fecha de última actualización: 2026-06-13. Validado en claro (ES/EN);
+    oscuro hereda tokens ya validados (sin colores nuevos).
+- **Sigue**: Fase 6.
 - **Pendientes diferidos**:
   - Quitar `src/app/[locale]/styleguide/` antes de producción (Fase 8) y excluirla del sitemap (Fase 7).
   - Capturas reales de Polypulse (las provee Iván) → reemplazan los placeholders en `/polypulse`.

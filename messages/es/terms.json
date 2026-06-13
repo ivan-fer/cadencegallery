@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "title": "Términos de uso",
+    "description": "Términos de uso de las aplicaciones de Cadence Gallery."
+  },
+  "title": "Términos de uso",
+  "updatedLabel": "Última actualización",
+  "lastUpdated": "2026-06-13",
+  "intro": "Al usar las aplicaciones de Cadence Gallery —Cadence Metronome y Cadence Polypulse— aceptás estos términos. Están escritos para ser claros y breves, no para llenar páginas.",
+  "sections": [
+    {
+      "heading": "Uso de las apps",
+      "body": [
+        "Te damos permiso para usar nuestras apps en tus dispositivos, para tu uso personal. Las apps se ofrecen tal cual están («as-is»), con las funciones que tengan en cada versión."
+      ]
+    },
+    {
+      "heading": "Sin garantías",
+      "body": [
+        "Hacemos las apps con cuidado y las probamos, pero se ofrecen sin garantías de ningún tipo. No garantizamos que funcionen sin errores ni que sean adecuadas para un propósito particular. Usás las apps bajo tu propia responsabilidad."
+      ]
+    },
+    {
+      "heading": "Limitación de responsabilidad",
+      "body": [
+        "En la medida en que la ley lo permita, Cadence Gallery no se hace responsable por daños derivados del uso de las apps.",
+        "Una nota sobre tu audición: estas apps reproducen sonido y pueden usarse con auriculares. Cuidá el volumen. La exposición prolongada a volúmenes altos puede dañar tu oído. Ajustá el nivel a algo cómodo y seguro."
+      ]
+    },
+    {
+      "heading": "Propiedad intelectual",
+      "body": [
+        "El nombre Cadence Gallery, los nombres de las apps, los logos, los diseños y el contenido de las apps y de este sitio son propiedad de sus autores. Podés usar las apps, pero no copiar, redistribuir ni revender el software o la marca sin permiso."
+      ]
+    },
+    {
+      "heading": "Cambios en las apps y en estos términos",
+      "body": [
+        "Podemos actualizar las apps, agregar o quitar funciones, y modificar estos términos. Cuando lo hagamos, actualizaremos esta página y su fecha. Seguir usando las apps después de un cambio implica que aceptás los términos vigentes."
+      ]
+    }
+  ],
+  "contactHeading": "Contacto",
+  "contactBody": "Si tenés preguntas sobre estos términos, escribinos a",
+  "email": "contacto@cadencegallery.com"
+}
