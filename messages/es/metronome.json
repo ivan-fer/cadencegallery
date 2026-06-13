@@ -55,10 +55,14 @@
   },
   "screenshots": {
     "eyebrow": "Capturas",
-    "title": "Mirá cómo se ve",
-    "light": "Tema claro",
-    "zen": "Tema Zen",
-    "retro": "Tema Retro"
+    "title": "Un tema para cada momento",
+    "neon": "Neon",
+    "neonPlaying": "Neon · en marcha",
+    "cyber": "Cyber",
+    "chrome": "Chrome",
+    "material": "Material You",
+    "neonLight": "Neon claro",
+    "zen": "Zen"
   },
   "availability": {
     "badge": "Próximamente en iOS y Android",

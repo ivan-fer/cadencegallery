@@ -317,12 +317,22 @@ color de marca (componente `ScreenshotPlaceholder`), reemplazables cuando Iván 
     ya estaban (fases 1-2); se corrigió el índice de guías para tener un `h1` único (antes el título
     salía como `h2` del `Section`). Verificado en el HTML generado (canonical/hreflang/OG/JSON-LD,
     sitemap/robots, 1 `h1` por página). Lint/TS/build limpios.
+  - Capturas reales (2026-06-13): Iván reemplazó todas las capturas fuente en `design/screenshots/`
+    (16 JPG 1080×2400). Script `scripts/build-screenshots.mjs` (sharp, 780px ancho, WebP q82) optimiza
+    las 12 elegidas a `public/screenshots/`. **Metronome**: hero Neon (en marcha) + galería de los 7
+    temas (Neon, Neon en marcha, Cyber, Chrome, Material You, Neon claro, Zen); título de sección pasó
+    a "Un tema para cada momento" (sin número). **Polypulse**: adiós placeholders — hero 5:4:3 (tres
+    voces), galería Reproductor (7:4)/Mixer/Coach/Sonidos por voz. **Home**: cards con capturas reales
+    (`object-cover` encuadrado). `PhoneShot` ajustado a 780×1733 (proporción 9:20 real, evita CLS).
+    4 capturas de Polypulse (`library`, `bpm_dialog`, `anchor_init`, `_create_dialog`) **descartadas**
+    por un bug de mojibake (UTF-8 leído como Latin-1) en la **propia app** — reintegrarlas si Iván las
+    corrige. Validado claro ES/EN; lint/build limpios.
 - **Sigue**: Fase 8 (deploy, con autorización) o Fase 9 (pulido).
 - **Pendientes diferidos**:
   - Quitar `src/app/[locale]/styleguide/` antes de producción (Fase 8). Ya está fuera del sitemap y
     con disallow en robots + `noindex` (Fase 7), pero conviene eliminar la ruta antes del deploy.
-  - Capturas reales de Polypulse (las provee Iván) → reemplazan los placeholders en `/polypulse`.
   - Iván puede ajustar el copy de apps y home (lo redactó Claude) cuando lo lea en el sitio.
+  - Si Iván corrige el mojibake de Polypulse en la app, reintegrar la captura de Library (y otras) al sitio.
 
 ### Plan de fases
 

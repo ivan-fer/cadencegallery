@@ -55,10 +55,14 @@
   },
   "screenshots": {
     "eyebrow": "Screenshots",
-    "title": "Take a look",
-    "light": "Light theme",
-    "zen": "Zen theme",
-    "retro": "Retro theme"
+    "title": "A theme for every mood",
+    "neon": "Neon",
+    "neonPlaying": "Neon · playing",
+    "cyber": "Cyber",
+    "chrome": "Chrome",
+    "material": "Material You",
+    "neonLight": "Neon light",
+    "zen": "Zen"
   },
   "availability": {
     "badge": "Coming soon on iOS & Android",

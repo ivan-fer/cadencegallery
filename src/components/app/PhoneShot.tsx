@@ -15,7 +15,7 @@ export function PhoneShot({ src, alt, className, priority = false }: PhoneShotPr
       src={src}
       alt={alt}
       width={780}
-      height={1768}
+      height={1733}
       loading={priority ? 'eager' : 'lazy'}
       className={cn(
         'h-auto w-full max-w-[260px] rounded-[2rem] border border-border shadow-xl shadow-black/10',

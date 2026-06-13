@@ -58,7 +58,8 @@
     "title": "A look at the app",
     "player": "Player",
     "mixer": "Mixer",
-    "coach": "Coach"
+    "coach": "Coach",
+    "voices": "Per-voice sounds"
   },
   "availability": {
     "badge": "Coming soon on iOS & Android",

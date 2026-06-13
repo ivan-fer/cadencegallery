@@ -14,9 +14,9 @@ import { AppHero } from '@/components/app/AppHero';
 import { Availability } from '@/components/app/Availability';
 import { type Feature, FeatureGrid } from '@/components/app/FeatureGrid';
 import { GuidesCta } from '@/components/app/GuidesCta';
+import { PhoneShot } from '@/components/app/PhoneShot';
 import { ScreenshotGallery, ScreenshotItem } from '@/components/app/ScreenshotGallery';
 import { JsonLd } from '@/components/seo/JsonLd';
-import { ScreenshotPlaceholder } from '@/components/ui/ScreenshotPlaceholder';
 import { Section } from '@/components/ui/Section';
 import { buildPageMetadata } from '@/lib/metadata';
 import { softwareApplicationLd } from '@/lib/structured-data';
@@ -33,8 +33,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: t('meta.description'),
   });
 }
-
-const PHONE_PLACEHOLDER = 'aspect-[780/1768] w-full max-w-[260px] rounded-[2rem]';
 
 const FEATURE_ICONS = {
   voices: Layers,
@@ -79,10 +77,10 @@ export default async function PolypulsePage({ params }: Props) {
         guidesHref="/polypulse/guides"
         guidesLabel={t('hero.guidesCta')}
         media={
-          <ScreenshotPlaceholder
-            label="Cadence Polypulse"
-            caption={t('screenshots.player')}
-            className={PHONE_PLACEHOLDER}
+          <PhoneShot
+            src="/screenshots/polypulse-poly.webp"
+            alt="Cadence Polypulse — polirritmia 5:4:3"
+            priority
           />
         }
       />
@@ -111,13 +109,16 @@ export default async function PolypulsePage({ params }: Props) {
         className="border-t border-border"
       >
         <ScreenshotGallery>
-          {(['player', 'mixer', 'coach'] as const).map((key) => (
+          {(
+            [
+              ['player', 'polypulse-player'],
+              ['mixer', 'polypulse-mixer'],
+              ['coach', 'polypulse-coach'],
+              ['voices', 'polypulse-voices'],
+            ] as const
+          ).map(([key, file]) => (
             <ScreenshotItem key={key} caption={t(`screenshots.${key}`)}>
-              <ScreenshotPlaceholder
-                label="Cadence Polypulse"
-                caption={t(`screenshots.${key}`)}
-                className={PHONE_PLACEHOLDER}
-              />
+              <PhoneShot src={`/screenshots/${file}.webp`} alt={t(`screenshots.${key}`)} />
             </ScreenshotItem>
           ))}
         </ScreenshotGallery>

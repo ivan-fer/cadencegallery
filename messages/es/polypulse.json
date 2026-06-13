@@ -58,7 +58,8 @@
     "title": "Un vistazo a la app",
     "player": "Reproductor",
     "mixer": "Mixer",
-    "coach": "Coach"
+    "coach": "Coach",
+    "voices": "Sonidos por voz"
   },
   "availability": {
     "badge": "Próximamente en iOS y Android",

@@ -19,14 +19,16 @@ export function AppsSection() {
           name={t('metronome.name')}
           tagline={t('metronome.tagline')}
           cta={t('metronome.cta')}
-          screenshotCaption={t('screenshotSoon')}
+          imageSrc="/screenshots/metronome-neon-playing.webp"
+          imagePosition="object-[center_36%]"
         />
         <AppCard
           href="/polypulse"
           name={t('polypulse.name')}
           tagline={t('polypulse.tagline')}
           cta={t('polypulse.cta')}
-          screenshotCaption={t('screenshotSoon')}
+          imageSrc="/screenshots/polypulse-poly.webp"
+          imagePosition="object-[center_34%]"
         />
       </div>
     </Section>

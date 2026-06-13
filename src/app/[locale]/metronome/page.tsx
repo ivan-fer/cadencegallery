@@ -68,7 +68,11 @@ export default async function MetronomePage({ params }: Props) {
         guidesHref="/metronome/guides"
         guidesLabel={t('hero.guidesCta')}
         media={
-          <PhoneShot src="/screenshots/metronome-light.webp" alt="Cadence Metronome" priority />
+          <PhoneShot
+            src="/screenshots/metronome-neon-playing.webp"
+            alt="Cadence Metronome — tema Neon"
+            priority
+          />
         }
       />
 
@@ -96,15 +100,21 @@ export default async function MetronomePage({ params }: Props) {
         className="border-t border-border"
       >
         <ScreenshotGallery>
-          <ScreenshotItem caption={t('screenshots.light')}>
-            <PhoneShot src="/screenshots/metronome-light.webp" alt={t('screenshots.light')} />
-          </ScreenshotItem>
-          <ScreenshotItem caption={t('screenshots.zen')}>
-            <PhoneShot src="/screenshots/metronome-zen.webp" alt={t('screenshots.zen')} />
-          </ScreenshotItem>
-          <ScreenshotItem caption={t('screenshots.retro')}>
-            <PhoneShot src="/screenshots/metronome-retro.webp" alt={t('screenshots.retro')} />
-          </ScreenshotItem>
+          {(
+            [
+              ['neon', 'metronome-neon'],
+              ['neonPlaying', 'metronome-neon-playing'],
+              ['cyber', 'metronome-cyber'],
+              ['chrome', 'metronome-chrome'],
+              ['material', 'metronome-material'],
+              ['neonLight', 'metronome-neon-light'],
+              ['zen', 'metronome-zen'],
+            ] as const
+          ).map(([key, file]) => (
+            <ScreenshotItem key={key} caption={t(`screenshots.${key}`)}>
+              <PhoneShot src={`/screenshots/${file}.webp`} alt={t(`screenshots.${key}`)} />
+            </ScreenshotItem>
+          ))}
         </ScreenshotGallery>
       </Section>
 
