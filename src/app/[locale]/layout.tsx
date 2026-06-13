@@ -6,15 +6,26 @@ import { Footer } from '@/components/layout/Footer';
 import { Header } from '@/components/layout/Header';
 import { routing } from '@/i18n/routing';
 import { manrope } from '@/lib/fonts';
+import { OG_IMAGE, SITE_NAME, SITE_URL } from '@/lib/metadata';
 import '@/styles/globals.css';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Cadence Gallery',
+    default: SITE_NAME,
     template: '%s · Cadence Gallery',
   },
   description: 'Practice tools for musicians, crafted with care.',
-  metadataBase: new URL('https://cadencegallery.com'),
+  metadataBase: new URL(SITE_URL),
+  applicationName: SITE_NAME,
+  openGraph: {
+    type: 'website',
+    siteName: SITE_NAME,
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: SITE_NAME }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: [OG_IMAGE],
+  },
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },

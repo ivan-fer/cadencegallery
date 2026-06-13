@@ -1,4 +1,8 @@
 {
+  "meta": {
+    "title": "Cadence Polypulse",
+    "description": "A polyrhythm trainer: up to three synchronized voices, a ring visualizer, a per-voice mixer, and a Coach mode with precision routines."
+  },
   "hero": {
     "eyebrow": "Polyrhythm trainer",
     "tagline": "Internalize polyrhythms, pulse by pulse, until they're yours.",

@@ -1,4 +1,8 @@
 {
+  "meta": {
+    "title": "Cadence Polypulse",
+    "description": "Entrenador de polirritmias: hasta tres voces sincronizadas, visualizador de anillos, mixer por voz y un modo Coach con rutinas de precisión."
+  },
   "hero": {
     "eyebrow": "Entrenador de polirritmias",
     "tagline": "Internalizá las polirritmias, pulso a pulso, hasta hacerlas tuyas.",

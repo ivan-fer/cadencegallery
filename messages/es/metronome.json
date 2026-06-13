@@ -1,4 +1,8 @@
 {
+  "meta": {
+    "title": "Cadence Metronome",
+    "description": "Metrónomo de precisión con audio nativo de baja latencia, tap tempo, acentos, subdivisiones y un sequencer para practicar de verdad."
+  },
   "hero": {
     "eyebrow": "Metrónomo de precisión",
     "tagline": "Metrónomo de precisión para práctica seria, con audio nativo de baja latencia.",

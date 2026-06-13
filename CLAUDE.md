@@ -236,6 +236,16 @@ en la raíz de `public/`, y el resto bajo `public/brand/` (`favicon.svg`, `icons
 marks). El `<meta name="theme-color">` se emite con `media="(prefers-color-scheme: …)"` (claro
 y oscuro), no el `#241826` fijo del snippet.
 
+### SEO en static export (metadata, sitemap, robots, JSON-LD)
+Toda la metadata sale de un helper único (`buildPageMetadata` en `src/lib/metadata.ts`) que arma
+title/description + `alternates` (canonical + hreflang es/en/x-default) + OpenGraph + Twitter. La
+imagen OG se incluye **en cada página** (no solo en el layout) porque Next reemplaza el objeto
+`openGraph` entero al sobrescribirlo, no hace merge profundo. `app/sitemap.ts` y `app/robots.ts`
+(con `export const dynamic = 'force-static'`) generan `/sitemap.xml` y `/robots.txt` estáticos en el
+export; el sitemap enumera segmentos × locales con `alternates.languages`. JSON-LD vía componente
+`JsonLd` (script inline); `SoftwareApplication` sin `offers` porque las apps no están publicadas.
+URLs siempre con trailing slash (coincide con `trailingSlash: true`).
+
 ### Guías: índice + página por guía (ruta dinámica estática)
 Cada guía tiene su propia URL (`/[app]/guides/[slug]`) en vez de secciones con anclas en una sola
 página: mejor para SEO y para compartir links, y escala al sumar guías. En static export, el
@@ -252,8 +262,8 @@ color de marca (componente `ScreenshotPlaceholder`), reemplazables cuando Iván 
 
 ## 7. Estado actual
 
-- **Fase activa**: **Fase 6 completada** ✅ (2026-06-13). Próximo: Fase 7 (SEO: meta, sitemap,
-  robots, hreflang, JSON-LD + accesibilidad) — pendiente de TODOs y confirmación.
+- **Fase activa**: **Fase 7 completada** ✅ (2026-06-13). Próximo: Fase 8 (Cloudflare Pages,
+  dominio, deploy — **solo con autorización explícita de Iván**) o Fase 9 (pulido visual).
 - **Completado**:
   - Descubrimiento (sección 11) y decisiones acordadas con Iván.
   - Fase 0: brand kit copiado a `public/` (favicon, manifest, `/brand/`), fuente a `src/fonts/`.
@@ -295,9 +305,22 @@ color de marca (componente `ScreenshotPlaceholder`), reemplazables cuando Iván 
     (las 4 rutinas reales del Coach, verificadas en `docs/coach_user_manual` de la app), mixer.
     Datos de features verificados contra el código (subdivisiones 2/3/4, acentos vía
     `customAccentedBeats`, BPM 20–300). Validado en claro ES/EN.
-- **Sigue**: Fase 7.
+  - Fase 7: SEO + accesibilidad. Helper `src/lib/metadata.ts` (`buildPageMetadata`: title/description
+    + `alternates` canonical/hreflang es/en/x-default + OpenGraph + Twitter `summary_large_image`),
+    cableado en **todas** las páginas (claves `meta.title`/`meta.description` por namespace; home con
+    título absoluto). JSON-LD (`src/lib/structured-data.ts` + componente `src/components/seo/JsonLd`):
+    `SoftwareApplication` en `/metronome` y `/polypulse` (sin `offers`/precio — apps no publicadas),
+    `Organization` + `WebSite` en el home. `app/sitemap.ts` (rutas × idiomas con `alternates.languages`,
+    sin styleguide) y `app/robots.ts` (sitemap + disallow de styleguide) → `/sitemap.xml` y `/robots.txt`
+    estáticos. Imagen OG de marca 1200×630 en `public/brand/og.png` (generada con `sharp`,
+    `scripts/build-og.mjs`). A11y: skip-link, `lang`, `prefers-reduced-motion`, aria-labels en iconos
+    ya estaban (fases 1-2); se corrigió el índice de guías para tener un `h1` único (antes el título
+    salía como `h2` del `Section`). Verificado en el HTML generado (canonical/hreflang/OG/JSON-LD,
+    sitemap/robots, 1 `h1` por página). Lint/TS/build limpios.
+- **Sigue**: Fase 8 (deploy, con autorización) o Fase 9 (pulido).
 - **Pendientes diferidos**:
-  - Quitar `src/app/[locale]/styleguide/` antes de producción (Fase 8) y excluirla del sitemap (Fase 7).
+  - Quitar `src/app/[locale]/styleguide/` antes de producción (Fase 8). Ya está fuera del sitemap y
+    con disallow en robots + `noindex` (Fase 7), pero conviene eliminar la ruta antes del deploy.
   - Capturas reales de Polypulse (las provee Iván) → reemplazan los placeholders en `/polypulse`.
   - Iván puede ajustar el copy de apps y home (lo redactó Claude) cuando lo lea en el sitio.
 

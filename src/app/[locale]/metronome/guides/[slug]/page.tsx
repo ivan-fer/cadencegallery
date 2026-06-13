@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { GuideArticle, type GuideSection } from '@/components/guides/GuideArticle';
 import { isGuideSlug, metronomeGuideSlugs } from '@/lib/guides';
+import { buildPageMetadata } from '@/lib/metadata';
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
@@ -15,10 +16,12 @@ export const dynamicParams = false;
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
   const t = await getTranslations({ locale, namespace: 'metronomeGuides' });
-  return {
+  return buildPageMetadata({
+    locale,
+    segment: `metronome/guides/${slug}`,
     title: t(`guides.${slug}.title`),
     description: t(`guides.${slug}.summary`),
-  };
+  });
 }
 
 export default async function MetronomeGuidePage({ params }: Props) {

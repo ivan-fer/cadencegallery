@@ -1,4 +1,8 @@
 {
+  "meta": {
+    "title": "Cadence Gallery — Practice tools for musicians",
+    "description": "The home of Cadence Metronome and Cadence Polypulse: practice apps for musicians, crafted with care and an obsession for detail."
+  },
   "hero": {
     "tagline": "Practice tools for musicians, crafted with care and an obsession for detail.",
     "ctaMetronome": "View Cadence Metronome",

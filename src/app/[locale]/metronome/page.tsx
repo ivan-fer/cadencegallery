@@ -1,4 +1,5 @@
 import { Hand, History, ListMusic, Music, Music2, Palette, ShieldCheck, Zap } from 'lucide-react';
+import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { AppHero } from '@/components/app/AppHero';
 import { Availability } from '@/components/app/Availability';
@@ -6,9 +7,23 @@ import { type Feature, FeatureGrid } from '@/components/app/FeatureGrid';
 import { GuidesCta } from '@/components/app/GuidesCta';
 import { PhoneShot } from '@/components/app/PhoneShot';
 import { ScreenshotGallery, ScreenshotItem } from '@/components/app/ScreenshotGallery';
+import { JsonLd } from '@/components/seo/JsonLd';
 import { Section } from '@/components/ui/Section';
+import { buildPageMetadata } from '@/lib/metadata';
+import { softwareApplicationLd } from '@/lib/structured-data';
 
 type Props = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'metronome' });
+  return buildPageMetadata({
+    locale,
+    segment: 'metronome',
+    title: t('meta.title'),
+    description: t('meta.description'),
+  });
+}
 
 const FEATURE_ICONS = {
   lowLatency: Zap,
@@ -37,6 +52,14 @@ export default async function MetronomePage({ params }: Props) {
 
   return (
     <>
+      <JsonLd
+        data={softwareApplicationLd({
+          locale,
+          segment: 'metronome',
+          name: 'Cadence Metronome',
+          description: t('meta.description'),
+        })}
+      />
       <AppHero
         eyebrow={t('hero.eyebrow')}
         name="Cadence Metronome"
