@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cadence Gallery — Marca</title>
+<style>
+@font-face{font-family:'Manrope';src:url('../Manrope-VariableFont_wght.ttf') format('truetype');font-weight:200 800;font-display:swap;}
+:root{--dark:#241826;--purple:#6E2C8F;--mag:#C42BA6;--mag2:#E24FCB;--gal:#9A55C4;--ink:#1A1320;}
+*{box-sizing:border-box}
+body{font-family:'Manrope',system-ui,sans-serif;margin:0;background:#fafafa;color:#1d1626;}
+header{padding:44px 40px 8px;} header h1{margin:0;font-size:30px;font-weight:800;letter-spacing:-.02em;}
+header p{margin:8px 0 0;color:#6a6276;max-width:680px;line-height:1.5;}
+.wrap{padding:16px 40px 72px;max-width:1080px;}
+section{background:#fff;border:1px solid #ececec;border-radius:18px;padding:26px 28px;margin:22px 0;box-shadow:0 1px 3px rgba(0,0,0,.04);}
+h2{margin:0 0 16px;font-size:18px;font-weight:700;}
+.sub{color:#9a92a6;font-size:11px;letter-spacing:.05em;text-transform:uppercase;margin-bottom:10px;}
+.lockbox{display:flex;flex-wrap:wrap;gap:18px;align-items:stretch;}
+.lockbox > div{border:1px solid #eee;border-radius:14px;padding:18px 22px;display:flex;align-items:center;}
+.onlight{background:#fff;} .ondark{background:var(--dark);border-color:#3a2b40;}
+.lockbox img{height:48px;width:auto;display:block;}
+.icons{display:flex;flex-wrap:wrap;gap:22px;align-items:flex-end;}
+.icons figure{margin:0;text-align:center;}
+.icons img{display:block;border-radius:18%;box-shadow:0 1px 4px rgba(0,0,0,.12);}
+.icons figcaption{font-size:11px;color:#9a92a6;margin-top:6px;}
+.fav{display:flex;gap:16px;align-items:flex-end;background:#fff;border:1px solid #eee;border-radius:12px;padding:14px 18px;width:max-content;}
+.fav img{image-rendering:auto;}
+.swatches{display:flex;flex-wrap:wrap;gap:14px;}
+.sw{width:150px;border:1px solid #eee;border-radius:12px;overflow:hidden;}
+.sw .chip{height:70px;} .sw .meta{padding:8px 10px;font-size:12px;}
+.sw .meta b{display:block;font-weight:700;} .sw .meta span{color:#8a8294;font-variant-numeric:tabular-nums;}
+table{border-collapse:collapse;width:100%;font-size:13px;}
+td,th{text-align:left;padding:8px 10px;border-bottom:1px solid #f0f0f0;vertical-align:top;}
+th{color:#9a92a6;font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.04em;}
+code{background:#f4f1f6;padding:1px 6px;border-radius:5px;font-size:12px;}
+.note{color:#6a6276;font-size:13px;line-height:1.55;}
+</style></head>
+<body>
+<header>
+  <h1>Cadence Gallery — Marca</h1>
+  <p>Set de marca listo para producción. El símbolo es un portal (galería) con un círculo flotante que puede animarse (pulso). Logo y favicon salen del mismo sistema.</p>
+</header>
+<div class="wrap">
+
+  <section>
+    <h2>Firma horizontal</h2>
+    <div class="lockbox">
+      <div class="onlight"><img src="lockup_light.svg" alt="Cadence gallery claro"></div>
+      <div class="ondark"><img src="lockup_dark.svg" alt="Cadence gallery oscuro"></div>
+    </div>
+    <p class="note" style="margin-top:14px">Texto en Manrope convertido a contornos (no depende de la fuente instalada). "Cadence" en bold, "gallery" en light color <code>#9A55C4</code>.</p>
+  </section>
+
+  <section>
+    <h2>Símbolo · app icon</h2>
+    <div class="icons">
+      <figure><img src="icons/icon-128.png" width="96" height="96" alt=""><figcaption>app icon</figcaption></figure>
+      <figure><img src="icons/icon-512.png" width="72" height="72" alt=""><figcaption>512</figcaption></figure>
+      <figure><img src="icons/maskable-512.png" width="72" height="72" style="border-radius:0" alt=""><figcaption>maskable</figcaption></figure>
+    </div>
+    <div class="sub" style="margin-top:22px">Favicon · prueba a tamaño real</div>
+    <div class="fav">
+      <img src="icons/favicon-16.png" width="16" height="16" alt="16"><span class="note">16px</span>
+      <img src="icons/favicon-32.png" width="32" height="32" alt="32"><span class="note">32px</span>
+      <img src="icons/apple-touch-icon.png" width="48" height="48" style="border-radius:11px" alt=""><span class="note">apple-touch</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Paleta</h2>
+    <div class="swatches">
+      <div class="sw"><div class="chip" style="background:#241826"></div><div class="meta"><b>Berenjena</b><span>#241826</span></div></div>
+      <div class="sw"><div class="chip" style="background:#6E2C8F"></div><div class="meta"><b>Morado</b><span>#6E2C8F</span></div></div>
+      <div class="sw"><div class="chip" style="background:#C42BA6"></div><div class="meta"><b>Magenta</b><span>#C42BA6</span></div></div>
+      <div class="sw"><div class="chip" style="background:#E24FCB"></div><div class="meta"><b>Magenta claro</b><span>#E24FCB</span></div></div>
+      <div class="sw"><div class="chip" style="background:#9A55C4"></div><div class="meta"><b>Gallery (texto)</b><span>#9A55C4</span></div></div>
+      <div class="sw"><div class="chip" style="background:#1A1320"></div><div class="meta"><b>Tinta</b><span>#1A1320</span></div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Archivos del set</h2>
+    <table>
+      <tr><th>Archivo</th><th>Uso</th></tr>
+      <tr><td><code>lockup_light.svg</code> / <code>lockup_dark.svg</code></td><td>Firma horizontal para fondo claro / oscuro (vector, texto a contornos).</td></tr>
+      <tr><td><code>mark_color.svg</code> / <code>mark_white.svg</code> / <code>mark_ink.svg</code></td><td>Solo el símbolo, fondo transparente: color, blanco (sobre oscuro), monocromo.</td></tr>
+      <tr><td><code>icon_color.svg</code></td><td>App icon maestro (cuadrado redondeado).</td></tr>
+      <tr><td><code>icon_maskable.svg</code></td><td>Versión full-bleed para Android (zona segura 72%).</td></tr>
+      <tr><td><code>favicon.svg</code> · <code>favicon.ico</code></td><td>Favicon vector + .ico multi-tamaño (16/32/48).</td></tr>
+      <tr><td><code>icons/icon-{16…1024}.png</code></td><td>App icon rasterizado para tiendas y web.</td></tr>
+      <tr><td><code>icons/apple-touch-icon.png</code></td><td>Icono iOS (180px).</td></tr>
+      <tr><td><code>icons/maskable-{192,512}.png</code></td><td>PWA Android (purpose: maskable).</td></tr>
+      <tr><td><code>site.webmanifest</code> · <code>head-snippet.html</code></td><td>Manifest PWA y etiquetas <code>&lt;link&gt;</code> para pegar en el <code>&lt;head&gt;</code>.</td></tr>
+    </table>
+  </section>
+
+</div>
+</body></html>
