@@ -1,0 +1,13 @@
+{
+  // Config de Cloudflare Workers (Static Assets) para servir el export estático.
+  // El build (`npm run build`) genera `out/`; aquí le decimos a Wrangler que sirva
+  // esa carpeta como sitio estático. Deploy: `npx wrangler deploy`.
+  "name": "cadencegallery",
+  "compatibility_date": "2026-06-13",
+  "assets": {
+    // Carpeta del export estático de Next (output: 'export').
+    "directory": "./out",
+    // Rutas inexistentes → sirve out/404.html con status 404.
+    "not_found_handling": "404-page"
+  }
+}
