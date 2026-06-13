@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "title": "Cadence Polypulse Guides",
+    "description": "Short guides to read, play, and master polyrhythms with Cadence Polypulse."
+  },
+  "index": {
+    "eyebrow": "Guides",
+    "title": "Cadence Polypulse Guides",
+    "description": "Short guides to read, play, and master polyrhythms: from the fundamentals to Coach mode.",
+    "readMore": "Read guide"
+  },
+  "backToGuides": "All Polypulse guides",
+  "guides": {
+    "polyrhythm-basics": {
+      "title": "What a polyrhythm is and how to read it",
+      "summary": "Two rhythms at once, each with its own pulse. We show how they fit together —starting with the classic 3:2— and how to read the ring visualizer.",
+      "sections": [
+        {
+          "heading": "Two pulses at the same time",
+          "body": [
+            "A polyrhythm is the combination of two or more rhythms sounding at once, each dividing the same span of time into a different number of pulses. In a 3:2, one voice plays 3 even pulses while the other plays 2, within the same bar. Both start together and meet again at the end of the cycle."
+          ]
+        },
+        {
+          "heading": "Reading a 3:2 (the hemiola)",
+          "body": [
+            "The 3:2 is the most common polyrhythm and the best starting point. Picture the cycle split into 6 equal parts and count evenly."
+          ],
+          "list": [
+            "Count \"1 2 3 4 5 6\" steady, without rushing.",
+            "The voice of 3 lands on 1, 3, and 5.",
+            "The voice of 2 lands on 1 and 4.",
+            "The \"1\" is the only point where both hit together."
+          ]
+        },
+        {
+          "heading": "The ring visualizer",
+          "body": [
+            "In Cadence Polypulse each voice is a concentric ring that flashes right on its pulse. Watching the rings, you see the polyrhythm instead of only hearing it: you notice how one voice pulls ahead and falls behind the other, until they meet again at the start of the cycle."
+          ]
+        },
+        {
+          "heading": "How to practice it",
+          "steps": [
+            "Pick a simple polyrhythm like 3:2 and a slow tempo.",
+            "Listen for a few cycles following the rings, without playing.",
+            "Add your voice: sing or tap the 3 first, then the 2.",
+            "Once they lock in, raise the tempo gradually."
+          ]
+        }
+      ]
+    },
+    "coach-mode": {
+      "title": "Coach mode: four routines to internalize",
+      "summary": "Beyond listening, Coach mode makes you play. Four interactive exercises measure your accuracy and track your progress.",
+      "sections": [
+        {
+          "heading": "What Coach mode is",
+          "body": [
+            "Coach mode turns passive practice into active training: you tap on screen following a voice, and the app compares your timing against where the beats actually land. When you finish, it shows how accurate you were and saves the result to your history."
+          ]
+        },
+        {
+          "heading": "The four routines",
+          "list": [
+            "The Anchor Shift — hold one voice as an anchor and keep the other alive in your inner ear, even after the reference audio disappears.",
+            "Ghost Audio — both voices play for a few cycles, then the audio cuts out: you keep tapping in silence and the app measures how far you drifted.",
+            "Speed Ramping — you tap the voice of the 3:2; hold your accuracy for 15 seconds and the tempo rises by 4 BPM, hunting for your \"precision ceiling.\"",
+            "Subdivision Breakdown — first you tap the full subdivision grid, then only the cross voice, to feel the micro-grid that holds the polyrhythm together."
+          ]
+        },
+        {
+          "heading": "How to start",
+          "steps": [
+            "Open Coach mode and pick a routine.",
+            "Set the pattern (3:2 or 4:3, for example) and the starting tempo.",
+            "Follow the on-screen prompts: each routine guides you through its phases.",
+            "When you finish, check your accuracy and try again to improve it."
+          ]
+        },
+        {
+          "heading": "Where to begin",
+          "body": [
+            "If you're just starting out, begin with The Anchor Shift or Ghost Audio in 3:2 at a slow tempo. They're the best entry point before moving on to denser patterns like 4:3."
+          ]
+        }
+      ]
+    },
+    "mixer": {
+      "title": "The mixer: balance each voice",
+      "summary": "Independent volume, pan, mute, and solo for each rhythm. The mixer lets you spotlight the voice you're learning and place them in the stereo field.",
+      "sections": [
+        {
+          "heading": "A mix per voice",
+          "body": [
+            "Each rhythm in the polyrhythm is a voice with its own controls. By adjusting volume and pan, you build a mix that helps you hear exactly what you need while you practice."
+          ]
+        },
+        {
+          "heading": "The controls",
+          "list": [
+            "Volume — how loud each voice is. Turn up the one you're learning and bring the others down.",
+            "Pan — where the voice sits in the stereo field, left to right. Separating the voices to different sides helps you tell them apart.",
+            "Mute — silences a voice without removing it from the mix.",
+            "Solo — leaves only that voice playing, so you can focus on it."
+          ]
+        },
+        {
+          "heading": "How to use it for practice",
+          "steps": [
+            "Solo the voice you want to internalize and play it until it feels solid.",
+            "Add the second voice at low volume and bring it up gradually.",
+            "Pan the voices to opposite sides to hear them separately.",
+            "Once they lock in, match the volumes and center the pan to hear the full polyrhythm."
+          ]
+        },
+        {
+          "heading": "No interruptions",
+          "body": [
+            "You can adjust the mixer live: volume and pan changes apply on the fly, without interrupting the audio."
+          ]
+        }
+      ]
+    }
+  }
+}

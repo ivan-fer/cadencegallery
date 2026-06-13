@@ -1,11 +1,38 @@
+import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { PagePlaceholder } from '@/components/ui/PagePlaceholder';
+import { GuidesIndex, type GuideSummary } from '@/components/guides/GuidesIndex';
+import { polypulseGuideSlugs } from '@/lib/guides';
 
 type Props = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'polypulseGuides' });
+  return {
+    title: t('meta.title'),
+    description: t('meta.description'),
+  };
+}
 
 export default async function PolypulseGuidesPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations('common');
-  return <PagePlaceholder title={`${t('nav.polypulse')} — ${t('nav.guides')}`} />;
+  const t = await getTranslations('polypulseGuides');
+
+  const guides: GuideSummary[] = polypulseGuideSlugs.map((slug) => ({
+    slug,
+    title: t(`guides.${slug}.title`),
+    summary: t(`guides.${slug}.summary`),
+  }));
+
+  return (
+    <GuidesIndex
+      eyebrow={t('index.eyebrow')}
+      title={t('index.title')}
+      description={t('index.description')}
+      readMore={t('index.readMore')}
+      basePath="/polypulse/guides"
+      guides={guides}
+    />
+  );
 }

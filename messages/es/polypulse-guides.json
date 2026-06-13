@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "title": "Guías de Cadence Polypulse",
+    "description": "Guías breves para leer, tocar y dominar las polirritmias con Cadence Polypulse."
+  },
+  "index": {
+    "eyebrow": "Guías",
+    "title": "Guías de Cadence Polypulse",
+    "description": "Guías breves para leer, tocar y dominar las polirritmias: de los fundamentos al modo Coach.",
+    "readMore": "Leer guía"
+  },
+  "backToGuides": "Todas las guías de Polypulse",
+  "guides": {
+    "polyrhythm-basics": {
+      "title": "Qué es una polirritmia y cómo leerla",
+      "summary": "Dos ritmos a la vez, cada uno con su propio pulso. Te mostramos cómo encajan —empezando por la clásica 3:2— y cómo leer el visualizador de anillos.",
+      "sections": [
+        {
+          "heading": "Dos pulsos al mismo tiempo",
+          "body": [
+            "Una polirritmia es la combinación de dos o más ritmos que suenan a la vez, cada uno dividiendo el mismo lapso de tiempo en una cantidad distinta de pulsos. En una 3:2, una voz toca 3 pulsos parejos mientras la otra toca 2, en el mismo compás. Las dos empiezan juntas y vuelven a coincidir al final del ciclo."
+          ]
+        },
+        {
+          "heading": "Leer una 3:2 (la hemiola)",
+          "body": [
+            "La 3:2 es la polirritmia más común y el mejor punto de partida. Pensá el ciclo dividido en 6 partes iguales y contá parejo."
+          ],
+          "list": [
+            "Contá «1 2 3 4 5 6» constante y sin apurar.",
+            "La voz de 3 entra en 1, 3 y 5.",
+            "La voz de 2 entra en 1 y 4.",
+            "El «1» es el único punto donde las dos golpean juntas."
+          ]
+        },
+        {
+          "heading": "El visualizador de anillos",
+          "body": [
+            "En Cadence Polypulse cada voz es un anillo concéntrico que destella justo en su pulso. Mirando los anillos ves la polirritmia en lugar de solo escucharla: notás cómo una voz se adelanta y se atrasa respecto de la otra, hasta reencontrarse en el inicio del ciclo."
+          ]
+        },
+        {
+          "heading": "Cómo practicarla",
+          "steps": [
+            "Elegí una polirritmia simple como 3:2 y un tempo lento.",
+            "Escuchá unas vueltas siguiendo los anillos, sin tocar.",
+            "Sumá la voz: cantá o golpeá primero la de 3, después la de 2.",
+            "Cuando las sientas encajar, subí el tempo de a poco."
+          ]
+        }
+      ]
+    },
+    "coach-mode": {
+      "title": "El modo Coach: cuatro rutinas para internalizar",
+      "summary": "Más allá de escuchar, el modo Coach te hace tocar. Cuatro ejercicios interactivos miden tu precisión y registran tu progreso.",
+      "sections": [
+        {
+          "heading": "Qué es el modo Coach",
+          "body": [
+            "El modo Coach convierte la práctica pasiva en entrenamiento activo: tocás en la pantalla siguiendo una voz, y la app compara tu timing con el lugar exacto donde caen los pulsos. Al terminar te muestra qué tan preciso estuviste y guarda el resultado en tu historial."
+          ]
+        },
+        {
+          "heading": "Las cuatro rutinas",
+          "list": [
+            "The Anchor Shift — sostené una voz como ancla y mantené la otra viva en tu oído interno, aunque el audio de referencia desaparezca.",
+            "Ghost Audio — las dos voces suenan unos ciclos y después el audio se corta: seguís tocando en silencio y la app mide cuánto te desviaste.",
+            "Speed Ramping — tocás la voz de la 3:2; cuando mantenés la precisión 15 segundos, el tempo sube 4 BPM, buscando tu «techo de precisión».",
+            "Subdivision Breakdown — primero tocás toda la grilla de subdivisión y después solo la voz cruzada, para sentir la micro-grilla que sostiene la polirritmia."
+          ]
+        },
+        {
+          "heading": "Cómo empezar",
+          "steps": [
+            "Entrá al modo Coach y elegí una rutina.",
+            "Configurá el patrón (por ejemplo 3:2 o 4:3) y el tempo de inicio.",
+            "Seguí las instrucciones en pantalla: cada rutina te guía por sus fases.",
+            "Al terminar, revisá tu precisión y volvé a intentarlo para mejorarla."
+          ]
+        },
+        {
+          "heading": "Por dónde empezar",
+          "body": [
+            "Si recién arrancás, empezá por The Anchor Shift o Ghost Audio en 3:2 a tempo lento. Son el mejor punto de entrada antes de pasar a patrones más densos como 4:3."
+          ]
+        }
+      ]
+    },
+    "mixer": {
+      "title": "El mixer: equilibrá cada voz",
+      "summary": "Volumen, paneo, mute y solo independientes para cada ritmo. El mixer te deja destacar la voz que estás aprendiendo y ubicarlas en el espacio estéreo.",
+      "sections": [
+        {
+          "heading": "Una mezcla por voz",
+          "body": [
+            "Cada ritmo de la polirritmia es una voz con sus propios controles. Ajustando volumen y paneo armás una mezcla que te ayuda a escuchar exactamente lo que necesitás mientras practicás."
+          ]
+        },
+        {
+          "heading": "Los controles",
+          "list": [
+            "Volumen — cuánto suena cada voz. Subí la que estás aprendiendo y bajá las demás.",
+            "Paneo — dónde se ubica la voz en el estéreo, de izquierda a derecha. Separar las voces a distintos lados ayuda a distinguirlas.",
+            "Mute — silencia una voz sin sacarla de la mezcla.",
+            "Solo — deja sonando solo esa voz, para enfocarte en ella."
+          ]
+        },
+        {
+          "heading": "Cómo usarlo para practicar",
+          "steps": [
+            "Poné en solo la voz que querés internalizar y tocala hasta que la sientas firme.",
+            "Sumá la segunda voz a bajo volumen y subila de a poco.",
+            "Paneá las voces a lados opuestos para escucharlas por separado.",
+            "Cuando ya encajen, igualá los volúmenes y centrá el paneo para escuchar la polirritmia completa."
+          ]
+        },
+        {
+          "heading": "Sin cortes",
+          "body": [
+            "Podés ajustar el mixer en vivo: los cambios de volumen y paneo se aplican sobre la marcha, sin interrumpir el audio."
+          ]
+        }
+      ]
+    }
+  }
+}

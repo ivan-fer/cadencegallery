@@ -1,0 +1,117 @@
+{
+  "meta": {
+    "title": "Guías de Cadence Metronome",
+    "description": "Guías breves para sacarle el máximo a Cadence Metronome: tap tempo, acentos y subdivisiones."
+  },
+  "index": {
+    "eyebrow": "Guías",
+    "title": "Guías de Cadence Metronome",
+    "description": "Guías breves y didácticas para sacarle el máximo al metrónomo, del tap tempo a las subdivisiones.",
+    "readMore": "Leer guía"
+  },
+  "backToGuides": "Todas las guías de Metronome",
+  "guides": {
+    "tap-tempo": {
+      "title": "Tap Tempo: encontrá el tempo tocando",
+      "summary": "Cuando sabés cómo suena pero no el número, marcá el pulso con el dedo y dejá que Cadence Metronome calcule los BPM.",
+      "sections": [
+        {
+          "heading": "Qué es",
+          "body": [
+            "Tap Tempo te deja fijar el tempo tocando un botón al ritmo de la música, en lugar de adivinar un número. La app mide el tiempo entre tus toques y lo traduce a BPM (pulsos por minuto)."
+          ]
+        },
+        {
+          "heading": "Paso a paso",
+          "steps": [
+            "Abrí Cadence Metronome y ubicá el botón de Tap Tempo.",
+            "Tocá el botón al ritmo que querés, marcando cada pulso. Con dos toques ya tenés una primera lectura.",
+            "Seguí tocando unos pulsos más: la app promedia tus toques para afinar el tempo y filtrar pequeñas irregularidades.",
+            "Cuando el número se estabiliza, dejá de tocar. Ese es tu tempo, listo para usar."
+          ]
+        },
+        {
+          "heading": "Consejos",
+          "list": [
+            "Marcá negras (el pulso principal), no subdivisiones, para que el BPM sea el correcto.",
+            "Cuatro a ocho toques alcanzan para una lectura estable; cuantos más toques, más precisión.",
+            "Si te equivocás, pará un momento y volvé a empezar: la app reinicia el promedio.",
+            "Después podés ajustar el valor fino con el dial de BPM, de 20 a 300."
+          ]
+        }
+      ]
+    },
+    "accents": {
+      "title": "Acentos y compases: dale forma al pulso",
+      "summary": "El compás agrupa los pulsos; los acentos marcan cuáles suenan más fuerte. Juntos convierten un clic plano en un ritmo con dirección.",
+      "sections": [
+        {
+          "heading": "El compás",
+          "body": [
+            "El compás define cuántos pulsos hay en cada ciclo y cómo se agrupan. En 4/4 hay cuatro pulsos; en 3/4, tres (el vals); en 6/8, seis agrupados de a tres. Elegí el compás que corresponde a la pieza que estás practicando."
+          ]
+        },
+        {
+          "heading": "Los acentos",
+          "body": [
+            "Por defecto, el primer pulso de cada compás suena acentuado, más fuerte: es el que te orienta dentro del ciclo. En Cadence Metronome podés personalizar qué pulsos llevan acento, tocando cada pulso para marcarlo o quitarle el acento."
+          ]
+        },
+        {
+          "heading": "Paso a paso",
+          "steps": [
+            "Elegí el compás (por ejemplo 4/4) en la configuración de compás.",
+            "Mirá la fila de pulsos: el primero aparece acentuado.",
+            "Tocá cualquier pulso para acentuarlo; tocalo de nuevo para volverlo normal.",
+            "Dale play y escuchá cómo el patrón de acentos le da forma al compás."
+          ]
+        },
+        {
+          "heading": "Para qué sirve",
+          "list": [
+            "Sentir el «uno» de cada compás sin contar.",
+            "Practicar compases compuestos o de amalgama marcando los acentos donde van.",
+            "Crear patrones de acento propios para ejercicios específicos."
+          ]
+        }
+      ]
+    },
+    "subdivisions": {
+      "title": "Subdivisiones: practicá entre los pulsos",
+      "summary": "Subdividir el pulso en partes iguales —corcheas, tresillos, semicorcheas— te ayuda a tocar con precisión y a no apurar ni arrastrar.",
+      "sections": [
+        {
+          "heading": "Qué es una subdivisión",
+          "body": [
+            "Una subdivisión parte cada pulso en partes iguales más pequeñas. Si el pulso es una negra, las corcheas lo dividen en dos, los tresillos en tres y las semicorcheas en cuatro. Escuchar esas partes te da una grilla interna mucho más fina."
+          ]
+        },
+        {
+          "heading": "Las subdivisiones disponibles",
+          "list": [
+            "Corcheas — dos golpes por pulso.",
+            "Tresillos — tres golpes por pulso.",
+            "Semicorcheas — cuatro golpes por pulso."
+          ]
+        },
+        {
+          "heading": "Paso a paso",
+          "steps": [
+            "Fijá un tempo cómodo con el dial o con Tap Tempo.",
+            "Elegí la subdivisión: corcheas, tresillos o semicorcheas.",
+            "Dale play: vas a escuchar el pulso principal más los golpes intermedios, con un sonido más suave.",
+            "Tocá tu parte apoyándote en esa grilla; subí el tempo de a poco cuando te sientas firme."
+          ]
+        },
+        {
+          "heading": "Consejos",
+          "list": [
+            "Empezá lento: la subdivisión revela apuros y arrastres que a tempo no se notan.",
+            "Usalo para pasajes con corcheas o tresillos difíciles de mantener parejos.",
+            "Cuando ya esté interno, quitá la subdivisión y mantené la precisión solo con el pulso."
+          ]
+        }
+      ]
+    }
+  }
+}

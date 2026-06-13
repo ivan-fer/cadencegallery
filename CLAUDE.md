@@ -236,6 +236,13 @@ en la raíz de `public/`, y el resto bajo `public/brand/` (`favicon.svg`, `icons
 marks). El `<meta name="theme-color">` se emite con `media="(prefers-color-scheme: …)"` (claro
 y oscuro), no el `#241826` fijo del snippet.
 
+### Guías: índice + página por guía (ruta dinámica estática)
+Cada guía tiene su propia URL (`/[app]/guides/[slug]`) en vez de secciones con anclas en una sola
+página: mejor para SEO y para compartir links, y escala al sumar guías. En static export, el
+segmento `[slug]` enumera sus valores con `generateStaticParams` (los slugs de `src/lib/guides.ts`)
+y `dynamicParams = false`; Next compone locale × slug. El contenido (estructurado en `sections[]`)
+vive en namespaces JSON propios. Decidido con Iván en Fase 6.
+
 ### Screenshots
 Metronome usa 3 capturas reales (`screen-light`, `screen-zen`, `screen-retro`; se descarta
 `neon_dark_before_refactor.jpg`). Polypulse no tiene capturas → placeholders diseñados con
@@ -245,8 +252,8 @@ color de marca (componente `ScreenshotPlaceholder`), reemplazables cuando Iván 
 
 ## 7. Estado actual
 
-- **Fase activa**: **Fase 5 completada** ✅ (2026-06-13). Próximo: Fase 6 (guías iniciales,
-  2-3 por app) — pendiente de TODOs y confirmación.
+- **Fase activa**: **Fase 6 completada** ✅ (2026-06-13). Próximo: Fase 7 (SEO: meta, sitemap,
+  robots, hreflang, JSON-LD + accesibilidad) — pendiente de TODOs y confirmación.
 - **Completado**:
   - Descubrimiento (sección 11) y decisiones acordadas con Iván.
   - Fase 0: brand kit copiado a `public/` (favicon, manifest, `/brand/`), fuente a `src/fonts/`.
@@ -276,7 +283,19 @@ color de marca (componente `ScreenshotPlaceholder`), reemplazables cuando Iván 
     en background), Polypulse sin permisos especiales; ninguna graba audio (audio solo de salida,
     sin micrófono ni red). Fecha de última actualización: 2026-06-13. Validado en claro (ES/EN);
     oscuro hereda tokens ya validados (sin colores nuevos).
-- **Sigue**: Fase 6.
+  - Fase 6: guías iniciales (3 por app), contenido real redactado por Claude (revisión desde el
+    sitio). Estructura **índice + página por guía**: `/[app]/guides` lista cards y cada guía vive
+    en `/[app]/guides/[slug]` (ruta dinámica con `generateStaticParams` + `dynamicParams=false`,
+    slugs/orden en `src/lib/guides.ts`). Namespaces `metronome-guides.json`/`polypulse-guides.json`
+    (registrados como `metronomeGuides`/`polypulseGuides`); modelo por guía
+    `{ title, summary, sections[] }` y cada sección `heading` + `body[]`/`list?`/`steps?` (steps =
+    lista ordenada). Componentes en `src/components/guides/` (`GuidesIndex`, `GuideArticle` con
+    breadcrumb app › guías + back-link, render vía `.prose-cadence`). `generateMetadata` por página.
+    Temas — Metronome: tap-tempo, accents, subdivisions; Polypulse: polyrhythm-basics, coach-mode
+    (las 4 rutinas reales del Coach, verificadas en `docs/coach_user_manual` de la app), mixer.
+    Datos de features verificados contra el código (subdivisiones 2/3/4, acentos vía
+    `customAccentedBeats`, BPM 20–300). Validado en claro ES/EN.
+- **Sigue**: Fase 7.
 - **Pendientes diferidos**:
   - Quitar `src/app/[locale]/styleguide/` antes de producción (Fase 8) y excluirla del sitemap (Fase 7).
   - Capturas reales de Polypulse (las provee Iván) → reemplazan los placeholders en `/polypulse`.

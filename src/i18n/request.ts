@@ -11,14 +11,17 @@ export default getRequestConfig(async ({ requestLocale }) => {
   const requested = await requestLocale;
   const locale = hasLocale(routing.locales, requested) ? requested : routing.defaultLocale;
 
-  const [common, home, metronome, polypulse, privacy, terms] = await Promise.all([
-    import(`../../messages/${locale}/common.json`),
-    import(`../../messages/${locale}/home.json`),
-    import(`../../messages/${locale}/metronome.json`),
-    import(`../../messages/${locale}/polypulse.json`),
-    import(`../../messages/${locale}/privacy.json`),
-    import(`../../messages/${locale}/terms.json`),
-  ]);
+  const [common, home, metronome, polypulse, privacy, terms, metronomeGuides, polypulseGuides] =
+    await Promise.all([
+      import(`../../messages/${locale}/common.json`),
+      import(`../../messages/${locale}/home.json`),
+      import(`../../messages/${locale}/metronome.json`),
+      import(`../../messages/${locale}/polypulse.json`),
+      import(`../../messages/${locale}/privacy.json`),
+      import(`../../messages/${locale}/terms.json`),
+      import(`../../messages/${locale}/metronome-guides.json`),
+      import(`../../messages/${locale}/polypulse-guides.json`),
+    ]);
 
   return {
     locale,
@@ -29,6 +32,8 @@ export default getRequestConfig(async ({ requestLocale }) => {
       polypulse: polypulse.default,
       privacy: privacy.default,
       terms: terms.default,
+      metronomeGuides: metronomeGuides.default,
+      polypulseGuides: polypulseGuides.default,
     },
   };
 });

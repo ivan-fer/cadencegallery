@@ -1,0 +1,117 @@
+{
+  "meta": {
+    "title": "Cadence Metronome Guides",
+    "description": "Short guides to get the most out of Cadence Metronome: tap tempo, accents, and subdivisions."
+  },
+  "index": {
+    "eyebrow": "Guides",
+    "title": "Cadence Metronome Guides",
+    "description": "Short, practical guides to get the most out of the metronome, from tap tempo to subdivisions.",
+    "readMore": "Read guide"
+  },
+  "backToGuides": "All Metronome guides",
+  "guides": {
+    "tap-tempo": {
+      "title": "Tap Tempo: find the tempo by tapping",
+      "summary": "When you know how it sounds but not the number, tap the beat and let Cadence Metronome work out the BPM.",
+      "sections": [
+        {
+          "heading": "What it is",
+          "body": [
+            "Tap Tempo lets you set the tempo by tapping a button in time with the music, instead of guessing a number. The app measures the time between your taps and turns it into BPM (beats per minute)."
+          ]
+        },
+        {
+          "heading": "Step by step",
+          "steps": [
+            "Open Cadence Metronome and find the Tap Tempo button.",
+            "Tap the button in time with the beat you want, one tap per pulse. Two taps already give you a first reading.",
+            "Keep tapping a few more beats: the app averages your taps to refine the tempo and smooth out small inconsistencies.",
+            "When the number settles, stop tapping. That's your tempo, ready to use."
+          ]
+        },
+        {
+          "heading": "Tips",
+          "list": [
+            "Tap quarter notes (the main pulse), not subdivisions, so the BPM comes out right.",
+            "Four to eight taps are enough for a stable reading; more taps, more accuracy.",
+            "If you slip, pause for a moment and start again: the app resets the average.",
+            "You can fine-tune the value afterward with the BPM dial, from 20 to 300."
+          ]
+        }
+      ]
+    },
+    "accents": {
+      "title": "Accents and time signatures: shape the pulse",
+      "summary": "The time signature groups the beats; accents mark which ones land harder. Together they turn a flat click into a rhythm with direction.",
+      "sections": [
+        {
+          "heading": "The time signature",
+          "body": [
+            "The time signature sets how many beats are in each cycle and how they group. 4/4 has four beats; 3/4 has three (the waltz); 6/8 has six grouped in threes. Pick the one that matches the piece you're practicing."
+          ]
+        },
+        {
+          "heading": "The accents",
+          "body": [
+            "By default, the first beat of each bar is accented, louder: it's what orients you within the cycle. In Cadence Metronome you can customize which beats are accented, tapping each beat to mark it or clear its accent."
+          ]
+        },
+        {
+          "heading": "Step by step",
+          "steps": [
+            "Choose the time signature (4/4, for example) in the meter settings.",
+            "Look at the row of beats: the first one shows as accented.",
+            "Tap any beat to accent it; tap it again to make it normal.",
+            "Hit play and hear how the accent pattern gives the bar its shape."
+          ]
+        },
+        {
+          "heading": "What it's for",
+          "list": [
+            "Feeling the \"one\" of each bar without counting.",
+            "Practicing compound or odd meters by marking the accents where they belong.",
+            "Building your own accent patterns for specific exercises."
+          ]
+        }
+      ]
+    },
+    "subdivisions": {
+      "title": "Subdivisions: practice between the beats",
+      "summary": "Splitting the beat into equal parts —eighths, triplets, sixteenths— helps you play accurately and stop rushing or dragging.",
+      "sections": [
+        {
+          "heading": "What a subdivision is",
+          "body": [
+            "A subdivision splits each beat into smaller equal parts. If the beat is a quarter note, eighths divide it in two, triplets in three, and sixteenths in four. Hearing those parts gives you a much finer internal grid."
+          ]
+        },
+        {
+          "heading": "The available subdivisions",
+          "list": [
+            "Eighth notes — two hits per beat.",
+            "Triplets — three hits per beat.",
+            "Sixteenth notes — four hits per beat."
+          ]
+        },
+        {
+          "heading": "Step by step",
+          "steps": [
+            "Set a comfortable tempo with the dial or with Tap Tempo.",
+            "Choose the subdivision: eighths, triplets, or sixteenths.",
+            "Hit play: you'll hear the main pulse plus the in-between hits, on a softer sound.",
+            "Play your part leaning on that grid; raise the tempo gradually once it feels solid."
+          ]
+        },
+        {
+          "heading": "Tips",
+          "list": [
+            "Start slow: the subdivision exposes rushing and dragging you can't hear at tempo.",
+            "Use it for passages with eighths or triplets that are hard to keep even.",
+            "Once it's internalized, drop the subdivision and hold the precision on the pulse alone."
+          ]
+        }
+      ]
+    }
+  }
+}
