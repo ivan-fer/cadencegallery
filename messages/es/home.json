@@ -1,0 +1,51 @@
+{
+  "hero": {
+    "tagline": "Herramientas de práctica para músicos, hechas con cuidado y obsesión por el detalle.",
+    "ctaMetronome": "Ver Cadence Metronome",
+    "ctaPolypulse": "Ver Cadence Polypulse"
+  },
+  "apps": {
+    "eyebrow": "Las apps",
+    "title": "Dos instrumentos, una misma identidad",
+    "description": "Cada app de Cadence nace de la misma idea: dar a los músicos herramientas precisas, claras y sin distracciones.",
+    "screenshotSoon": "Captura próximamente",
+    "metronome": {
+      "name": "Cadence Metronome",
+      "tagline": "Metrónomo de precisión con audio de baja latencia, temas hechos a mano y un sequencer para practicar de verdad.",
+      "cta": "Conocer más"
+    },
+    "polypulse": {
+      "name": "Cadence Polypulse",
+      "tagline": "Entrenador de polirritmias: hasta tres voces sincronizadas, visualizador de anillos y rutinas guiadas.",
+      "cta": "Conocer más"
+    }
+  },
+  "latest": {
+    "eyebrow": "Novedades",
+    "title": "Lo último",
+    "items": [
+      {
+        "date": "2026-06-10",
+        "title": "El sitio de Cadence Gallery está en construcción",
+        "body": "Estamos armando la casa de la marca: presentación de las apps, guías de uso y documentación legal."
+      },
+      {
+        "date": "2026-05-23",
+        "title": "Cadence Metronome ahora es multilenguaje",
+        "body": "La app ya está disponible en español e inglés, junto con mejoras en el sequencer."
+      },
+      {
+        "date": "2026-04-15",
+        "title": "Cadence Polypulse en desarrollo",
+        "body": "Avanza el entrenador de polirritmias, con su modo Coach y rutinas de precisión."
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "El proyecto",
+    "title": "Un proyecto cuidado, hecho por alguien que mira los detalles",
+    "body": "Cadence Gallery es un estudio independiente enfocado en herramientas musicales. No es producto masivo: es trabajo de autor, pensado para músicos que practican en serio. Si tenés comentarios, ideas o encontraste algo para mejorar, escribinos.",
+    "contactLabel": "Escribinos a",
+    "email": "contacto@cadencegallery.com"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "hero": {
+    "tagline": "Practice tools for musicians, crafted with care and an obsession for detail.",
+    "ctaMetronome": "View Cadence Metronome",
+    "ctaPolypulse": "View Cadence Polypulse"
+  },
+  "apps": {
+    "eyebrow": "The apps",
+    "title": "Two instruments, one identity",
+    "description": "Every Cadence app comes from the same idea: give musicians precise, clear, distraction-free tools.",
+    "screenshotSoon": "Screenshot coming soon",
+    "metronome": {
+      "name": "Cadence Metronome",
+      "tagline": "A precision metronome with low-latency audio, handcrafted themes and a sequencer for serious practice.",
+      "cta": "Learn more"
+    },
+    "polypulse": {
+      "name": "Cadence Polypulse",
+      "tagline": "A polyrhythm trainer: up to three synced voices, a ring visualizer and guided routines.",
+      "cta": "Learn more"
+    }
+  },
+  "latest": {
+    "eyebrow": "Updates",
+    "title": "Latest",
+    "items": [
+      {
+        "date": "2026-06-10",
+        "title": "The Cadence Gallery site is under construction",
+        "body": "We're building the brand's home: app showcases, usage guides and legal documentation."
+      },
+      {
+        "date": "2026-05-23",
+        "title": "Cadence Metronome is now multilingual",
+        "body": "The app is now available in Spanish and English, along with sequencer improvements."
+      },
+      {
+        "date": "2026-04-15",
+        "title": "Cadence Polypulse in development",
+        "body": "The polyrhythm trainer is progressing, with its Coach mode and precision routines."
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "The project",
+    "title": "A carefully made project, by someone who sweats the details",
+    "body": "Cadence Gallery is an independent studio focused on musical tools. Not a mass-market product — it's author's work, made for musicians who practice seriously. If you have feedback, ideas, or found something to improve, get in touch.",
+    "contactLabel": "Email us at",
+    "email": "contacto@cadencegallery.com"
+  }
+}

@@ -242,8 +242,8 @@ color de marca (componente `ScreenshotPlaceholder`), reemplazables cuando Iván 
 
 ## 7. Estado actual
 
-- **Fase activa**: **Fase 2 completada** ✅ (2026-06-13). Próximo: Fase 3 (Home con contenido
-  placeholder ES/EN) — pendiente de armar TODOs y confirmación de Iván.
+- **Fase activa**: **Fase 3 completada** ✅ (2026-06-13). Próximo: Fase 4 (páginas de detalle de
+  apps + extracción de contenido real con revisión de Iván) — pendiente de TODOs y confirmación.
 - **Completado**:
   - Descubrimiento (sección 11) y decisiones acordadas con Iván.
   - Fase 0: brand kit copiado a `public/` (favicon, manifest, `/brand/`), fuente a `src/fonts/`.
@@ -253,7 +253,10 @@ color de marca (componente `ScreenshotPlaceholder`), reemplazables cuando Iván 
   - Fase 2: sistema visual y componentes base — escala tipográfica, `Button`/`ButtonLink`, `Card`,
     `Section`, `Eyebrow`, `Badge`, `Prose` (+ `.prose-cadence`), helper `cn`. Validado visualmente
     en claro y oscuro (Edge headless). Página `/[locale]/styleguide` como dev aid (noindex).
-- **Sigue**: Fase 3.
+  - Fase 3: Home completo — Hero, AppsSection (AppCard + ScreenshotPlaceholder), LatestSection
+    (fechas con `useFormatter`), AboutSection (contacto `contacto@cadencegallery.com`). Namespace
+    `home.json` ES/EN. Copy de apps **provisional** (se refina en Fase 4). Validado claro/oscuro.
+- **Sigue**: Fase 4.
 - **Pendientes diferidos**:
   - Quitar `src/app/[locale]/styleguide/` antes de producción (Fase 8) y excluirla del sitemap (Fase 7).
   - Screenshots de Metronome a WebP (Fase 4, cuando se usen); capturas reales de Polypulse (las provee Iván).

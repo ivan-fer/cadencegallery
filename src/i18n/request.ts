@@ -11,12 +11,16 @@ export default getRequestConfig(async ({ requestLocale }) => {
   const requested = await requestLocale;
   const locale = hasLocale(routing.locales, requested) ? requested : routing.defaultLocale;
 
-  const common = (await import(`../../messages/${locale}/common.json`)).default;
+  const [common, home] = await Promise.all([
+    import(`../../messages/${locale}/common.json`),
+    import(`../../messages/${locale}/home.json`),
+  ]);
 
   return {
     locale,
     messages: {
-      common,
+      common: common.default,
+      home: home.default,
     },
   };
 });
