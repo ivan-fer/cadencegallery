@@ -1,0 +1,71 @@
+{
+  "hero": {
+    "eyebrow": "Precision metronome",
+    "tagline": "A precision metronome for serious practice, with low-latency native audio.",
+    "guidesCta": "View guides"
+  },
+  "description": {
+    "eyebrow": "What it is",
+    "title": "Precision you can feel",
+    "paragraphs": [
+      "Cadence Metronome is a precision metronome built on a native C++ audio engine. Unlike apps that suffer from latency and jitter, here every beat lands exactly when it should — a rock-solid foundation for serious practice.",
+      "But it's more than a steady click. Set time signatures and subdivisions, build practice sequences with tempo ramps and pauses, save your setups as presets, and track your progress with session history.",
+      "All in a clean, considered interface, with handcrafted themes, original sounds and haptic feedback. It works offline and collects no data: the app is yours and no one else's."
+    ]
+  },
+  "features": {
+    "eyebrow": "Features",
+    "title": "Built for demanding musicians",
+    "lowLatency": {
+      "title": "Low-latency audio",
+      "description": "Native C++ engine (FFI) for beats with no jitter or delay, on Android too."
+    },
+    "tapTempo": {
+      "title": "BPM dial & Tap Tempo",
+      "description": "From 20 to 300 BPM with an intuitive dial and tap tempo with smart averaging."
+    },
+    "timeSignatures": {
+      "title": "Time signatures & subdivisions",
+      "description": "Set time signatures (4/4, 3/4, 6/8…) and subdivisions with custom accents."
+    },
+    "sequencer": {
+      "title": "Practice sequencer",
+      "description": "Chain measures with tempo ramps, pauses and fermatas for structured rehearsals."
+    },
+    "themes": {
+      "title": "Handcrafted themes",
+      "description": "Neon, Cyber, Chrome, Zen and Material You support. Your metronome, your look."
+    },
+    "sounds": {
+      "title": "Sounds & presets",
+      "description": "Original sounds for different moods and presets to load your favorite setups."
+    },
+    "history": {
+      "title": "Practice history",
+      "description": "A local log of your sessions to see your habits and progress over time."
+    },
+    "privacy": {
+      "title": "Private & offline",
+      "description": "Works without internet, in Spanish and English, and collects no data."
+    }
+  },
+  "screenshots": {
+    "eyebrow": "Screenshots",
+    "title": "Take a look",
+    "light": "Light theme",
+    "zen": "Zen theme",
+    "retro": "Retro theme"
+  },
+  "availability": {
+    "badge": "Coming soon on iOS & Android",
+    "title": "Coming soon to the stores",
+    "note": "Cadence Metronome is on its way to the App Store and Google Play. Check back soon to download it.",
+    "appStore": "App Store · Coming soon",
+    "googlePlay": "Google Play · Coming soon"
+  },
+  "guides": {
+    "title": "Want to get the most out of it?",
+    "description": "Short, practical guides to master tap tempo, accents and subdivisions.",
+    "cta": "View Metronome guides"
+  }
+}

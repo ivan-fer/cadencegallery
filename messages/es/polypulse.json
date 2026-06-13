@@ -1,0 +1,71 @@
+{
+  "hero": {
+    "eyebrow": "Entrenador de polirritmias",
+    "tagline": "Internalizá las polirritmias, pulso a pulso, hasta hacerlas tuyas.",
+    "guidesCta": "Ver guías"
+  },
+  "description": {
+    "eyebrow": "Qué es",
+    "title": "Polirritmias que se entienden y se sienten",
+    "paragraphs": [
+      "Cadence Polypulse es un entrenador para internalizar polirritmias: reproducí hasta tres ritmos simultáneos perfectamente sincronizados (3:2, 4:3, 5:4, 7:4 y más) y escuchá cómo encajan entre sí.",
+      "Visualizá cada voz como anillos concéntricos que destellan en su pulso, ajustá volumen y paneo de cada ritmo en el mixer, y armá tu biblioteca con presets propios.",
+      "Y cuando quieras llevarlo al cuerpo, entrá al modo Coach: cuatro rutinas interactivas que miden tu precisión y registran tu progreso. Con el mismo motor de audio de baja latencia que Cadence Metronome."
+    ]
+  },
+  "features": {
+    "eyebrow": "Características",
+    "title": "Una herramienta de entrenamiento completa",
+    "voices": {
+      "title": "Hasta 3 voces sincronizadas",
+      "description": "Ritmos simultáneos con precisión de sample (3:2, 4:3, 5:4, 7:4:3 y más)."
+    },
+    "presets": {
+      "title": "Presets y biblioteca",
+      "description": "Polirritmias listas para usar y presets personalizados guardados entre sesiones."
+    },
+    "visualizer": {
+      "title": "Visualizador de anillos",
+      "description": "Cada voz es un anillo concéntrico que se ilumina exactamente en su pulso."
+    },
+    "mixer": {
+      "title": "Mixer por voz",
+      "description": "Volumen, paneo, mute y solo independientes para cada ritmo."
+    },
+    "coach": {
+      "title": "Modo Coach",
+      "description": "Cuatro rutinas interactivas que entrenan y miden tu precisión rítmica."
+    },
+    "progress": {
+      "title": "Historial de progreso",
+      "description": "Gráfico de precisión de los últimos 7 días para seguir tu evolución."
+    },
+    "hotUpdate": {
+      "title": "Cambios sin cortes",
+      "description": "Ajustá tempo, pulsos o sonido en vivo, sin interrumpir el audio."
+    },
+    "privacy": {
+      "title": "Privado y offline",
+      "description": "Funciona sin internet, en español e inglés, y no recolecta ningún dato."
+    }
+  },
+  "screenshots": {
+    "eyebrow": "Capturas",
+    "title": "Un vistazo a la app",
+    "player": "Reproductor",
+    "mixer": "Mixer",
+    "coach": "Coach"
+  },
+  "availability": {
+    "badge": "Próximamente en iOS y Android",
+    "title": "Próximamente en las tiendas",
+    "note": "Cadence Polypulse está en camino a App Store y Google Play. Volvé pronto para descargarlo.",
+    "appStore": "App Store · Próximamente",
+    "googlePlay": "Google Play · Próximamente"
+  },
+  "guides": {
+    "title": "Aprendé a leer y sentir las polirritmias",
+    "description": "Guías breves: qué es una polirritmia, cómo usar el modo entrenamiento y el mixer.",
+    "cta": "Ver guías de Polypulse"
+  }
+}

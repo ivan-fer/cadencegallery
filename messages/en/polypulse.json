@@ -1,0 +1,71 @@
+{
+  "hero": {
+    "eyebrow": "Polyrhythm trainer",
+    "tagline": "Internalize polyrhythms, pulse by pulse, until they're yours.",
+    "guidesCta": "View guides"
+  },
+  "description": {
+    "eyebrow": "What it is",
+    "title": "Polyrhythms you can understand and feel",
+    "paragraphs": [
+      "Cadence Polypulse is a trainer for internalizing polyrhythms: play up to three perfectly synced simultaneous rhythms (3:2, 4:3, 5:4, 7:4 and more) and hear how they lock together.",
+      "Visualize each voice as concentric rings that flash on their beat, adjust each rhythm's volume and pan in the mixer, and build your library with custom presets.",
+      "And when you want to take it further, open Coach mode: four interactive routines that measure your accuracy and track your progress. Powered by the same low-latency audio engine as Cadence Metronome."
+    ]
+  },
+  "features": {
+    "eyebrow": "Features",
+    "title": "A complete training tool",
+    "voices": {
+      "title": "Up to 3 synced voices",
+      "description": "Simultaneous rhythms with sample-accurate timing (3:2, 4:3, 5:4, 7:4:3 and more)."
+    },
+    "presets": {
+      "title": "Presets & library",
+      "description": "Ready-to-use polyrhythms and custom presets saved between sessions."
+    },
+    "visualizer": {
+      "title": "Ring visualizer",
+      "description": "Each voice is a concentric ring that lights up exactly on its beat."
+    },
+    "mixer": {
+      "title": "Per-voice mixer",
+      "description": "Independent volume, pan, mute and solo for each rhythm."
+    },
+    "coach": {
+      "title": "Coach mode",
+      "description": "Four interactive routines that train and measure your rhythmic accuracy."
+    },
+    "progress": {
+      "title": "Progress history",
+      "description": "A 7-day accuracy chart to follow how you're evolving."
+    },
+    "hotUpdate": {
+      "title": "Seamless changes",
+      "description": "Adjust tempo, pulses or sound live, with no audio interruption."
+    },
+    "privacy": {
+      "title": "Private & offline",
+      "description": "Works without internet, in Spanish and English, and collects no data."
+    }
+  },
+  "screenshots": {
+    "eyebrow": "Screenshots",
+    "title": "A look at the app",
+    "player": "Player",
+    "mixer": "Mixer",
+    "coach": "Coach"
+  },
+  "availability": {
+    "badge": "Coming soon on iOS & Android",
+    "title": "Coming soon to the stores",
+    "note": "Cadence Polypulse is on its way to the App Store and Google Play. Check back soon to download it.",
+    "appStore": "App Store · Coming soon",
+    "googlePlay": "Google Play · Coming soon"
+  },
+  "guides": {
+    "title": "Learn to read and feel polyrhythms",
+    "description": "Short guides: what a polyrhythm is, how to use training mode and the mixer.",
+    "cta": "View Polypulse guides"
+  }
+}

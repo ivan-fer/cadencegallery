@@ -11,9 +11,11 @@ export default getRequestConfig(async ({ requestLocale }) => {
   const requested = await requestLocale;
   const locale = hasLocale(routing.locales, requested) ? requested : routing.defaultLocale;
 
-  const [common, home] = await Promise.all([
+  const [common, home, metronome, polypulse] = await Promise.all([
     import(`../../messages/${locale}/common.json`),
     import(`../../messages/${locale}/home.json`),
+    import(`../../messages/${locale}/metronome.json`),
+    import(`../../messages/${locale}/polypulse.json`),
   ]);
 
   return {
@@ -21,6 +23,8 @@ export default getRequestConfig(async ({ requestLocale }) => {
     messages: {
       common: common.default,
       home: home.default,
+      metronome: metronome.default,
+      polypulse: polypulse.default,
     },
   };
 });

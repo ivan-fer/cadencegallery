@@ -242,8 +242,8 @@ color de marca (componente `ScreenshotPlaceholder`), reemplazables cuando Iván 
 
 ## 7. Estado actual
 
-- **Fase activa**: **Fase 3 completada** ✅ (2026-06-13). Próximo: Fase 4 (páginas de detalle de
-  apps + extracción de contenido real con revisión de Iván) — pendiente de TODOs y confirmación.
+- **Fase activa**: **Fase 4 completada** ✅ (2026-06-13). Próximo: Fase 5 (políticas legales:
+  privacy y terms, drafts ES/EN) — pendiente de TODOs y confirmación.
 - **Completado**:
   - Descubrimiento (sección 11) y decisiones acordadas con Iván.
   - Fase 0: brand kit copiado a `public/` (favicon, manifest, `/brand/`), fuente a `src/fonts/`.
@@ -255,11 +255,18 @@ color de marca (componente `ScreenshotPlaceholder`), reemplazables cuando Iván 
     en claro y oscuro (Edge headless). Página `/[locale]/styleguide` como dev aid (noindex).
   - Fase 3: Home completo — Hero, AppsSection (AppCard + ScreenshotPlaceholder), LatestSection
     (fechas con `useFormatter`), AboutSection (contacto `contacto@cadencegallery.com`). Namespace
-    `home.json` ES/EN. Copy de apps **provisional** (se refina en Fase 4). Validado claro/oscuro.
-- **Sigue**: Fase 4.
+    `home.json` ES/EN. Validado claro/oscuro.
+  - Fase 4: páginas de detalle `/metronome` y `/polypulse` con contenido real (redactado por Claude,
+    **sin** el paso de revisión previa — Iván decidió revisarlo desde el sitio). Componentes
+    compartidos en `src/components/app/` (AppHero, FeatureGrid, ScreenshotGallery, Availability,
+    GuidesCta, PhoneShot). Namespaces `metronome.json`/`polypulse.json` ES/EN. Screenshots de
+    Metronome convertidas a WebP en `public/screenshots/` (sharp, devDep). Polypulse con placeholders
+    (faltan capturas reales). Validado claro/oscuro.
+- **Sigue**: Fase 5.
 - **Pendientes diferidos**:
   - Quitar `src/app/[locale]/styleguide/` antes de producción (Fase 8) y excluirla del sitemap (Fase 7).
-  - Screenshots de Metronome a WebP (Fase 4, cuando se usen); capturas reales de Polypulse (las provee Iván).
+  - Capturas reales de Polypulse (las provee Iván) → reemplazan los placeholders en `/polypulse`.
+  - Iván puede ajustar el copy de apps y home (lo redactó Claude) cuando lo lea en el sitio.
 
 ### Plan de fases
 
