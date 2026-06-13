@@ -4,9 +4,9 @@ import { localizedUrl } from '@/lib/metadata';
 import { routing } from '@/i18n/routing';
 
 /**
- * Todas las rutas públicas (sin prefijo de idioma). Se excluye `styleguide`
- * (dev aid noindex). Cada segmento genera una entrada por locale con sus
- * `alternates.languages` (hreflang) para el indexado multilingüe.
+ * Todas las rutas públicas (sin prefijo de idioma). Cada segmento genera una
+ * entrada por locale con sus `alternates.languages` (hreflang) para el
+ * indexado multilingüe.
  */
 const segments: readonly string[] = [
   '',

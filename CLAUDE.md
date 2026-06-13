@@ -262,8 +262,9 @@ color de marca (componente `ScreenshotPlaceholder`), reemplazables cuando Iván 
 
 ## 7. Estado actual
 
-- **Fase activa**: **Fase 7 completada** ✅ (2026-06-13). Próximo: Fase 8 (Cloudflare Pages,
-  dominio, deploy — **solo con autorización explícita de Iván**) o Fase 9 (pulido visual).
+- **Fase activa**: **Fase 8 en curso** — repo preparado para deploy (2026-06-13). Falta la parte
+  de Cloudflare (conectar Pages + DNS del dominio), que ejecuta Iván desde su cuenta — **solo con
+  autorización explícita**. Después: Fase 9 (pulido visual).
 - **Completado**:
   - Descubrimiento (sección 11) y decisiones acordadas con Iván.
   - Fase 0: brand kit copiado a `public/` (favicon, manifest, `/brand/`), fuente a `src/fonts/`.
@@ -327,10 +328,13 @@ color de marca (componente `ScreenshotPlaceholder`), reemplazables cuando Iván 
     4 capturas de Polypulse (`library`, `bpm_dialog`, `anchor_init`, `_create_dialog`) **descartadas**
     por un bug de mojibake (UTF-8 leído como Latin-1) en la **propia app** — reintegrarlas si Iván las
     corrige. Validado claro ES/EN; lint/build limpios.
-- **Sigue**: Fase 8 (deploy, con autorización) o Fase 9 (pulido).
+  - Fase 8 (prep de deploy, 2026-06-13): ruta `styleguide` eliminada (+ limpieza en `robots.ts`/
+    `sitemap.ts`); build de producción verificado (`/out` con `index.html` redirect, `404.html`,
+    `robots.txt`, `sitemap.xml` de 26 URLs). Runbook de deploy en `docs/phases/phase-8.md` (params
+    de Cloudflare Pages: branch `main`, build `npm run build`, output `out`, Node 24; DNS del dominio;
+    checklist de validación en preview). Falta solo la ejecución en Cloudflare por parte de Iván.
+- **Sigue**: Fase 8 — ejecución en Cloudflare (con autorización) → luego Fase 9 (pulido).
 - **Pendientes diferidos**:
-  - Quitar `src/app/[locale]/styleguide/` antes de producción (Fase 8). Ya está fuera del sitemap y
-    con disallow en robots + `noindex` (Fase 7), pero conviene eliminar la ruta antes del deploy.
   - Iván puede ajustar el copy de apps y home (lo redactó Claude) cuando lo lea en el sitio.
   - Si Iván corrige el mojibake de Polypulse en la app, reintegrar la captura de Library (y otras) al sitio.
 

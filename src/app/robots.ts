@@ -8,8 +8,6 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      // `styleguide` es un dev aid noindex (se remueve antes de producción).
-      disallow: ['/es/styleguide/', '/en/styleguide/'],
     },
     sitemap: `${SITE_URL}/sitemap.xml`,
     host: SITE_URL,
