@@ -172,10 +172,13 @@ El **middleware de Next no corre en static export**, así que no hay negociació
 server-side. Como no existe `app/page.tsx` (todas las rutas viven bajo `[locale]`), `/` lo
 resuelve **`public/index.html`**: un redirect locale-aware (JS que respeta
 `localStorage('locale')` > `navigator.language` > `es`) con `<meta http-equiv="refresh">`
-como fallback sin JS (siempre a `/es/`). Esta solución funciona igual en `next dev` y en
-cualquier host estático (Cloudflare sirve `index.html` en `/`), y honra la persistencia de
-idioma. Se descartó `_redirects` de Cloudflare porque su 302 server-side dispararía antes que
-el JS y rompería la persistencia. No usar `redirects()` de `next.config` (no se aplica en export).
+como fallback sin JS (siempre a `/es/`). En el **export estático** (y en cualquier host estático
+como Cloudflare) `/` sirve `index.html` y el redirect funciona, honrando la persistencia de
+idioma. **Ojo en desarrollo**: `next dev` **no** sirve `public/index.html` en `/` (el App Router
+se queda con `/` y no hay `app/page.tsx`), así que la raíz da **404 en dev** — en dev hay que
+entrar directo a `/es/` o `/en/`. El redirect de raíz solo aplica al sitio buildeado. Se descartó
+`_redirects` de Cloudflare porque su 302 server-side dispararía antes que el JS y rompería la
+persistencia. No usar `redirects()` de `next.config` (no se aplica en export).
 
 ### ESLint 9 + flat config nativo de eslint-config-next
 `eslint-config-next` 16 exporta **flat config nativo** (arrays `Linter.Config[]`) en
