@@ -196,6 +196,21 @@ Los SVG de marca se sirven con `<img>` (más simple, permite swap claro/oscuro p
 `react-hooks/set-state-in-effect` y el mismatch de hidratación (usa `getServerSnapshot = false`).
 El toggle muta la clase del DOM; el observer dispara el re-render.
 
+### Componentes base sin librería externa (Fase 2)
+Sin shadcn/Radix ni tailwind-merge: para los primitivos que necesitamos alcanza Tailwind +
+`clsx` (helper `cn` en `src/lib/cn.ts`). Las variantes se resuelven con mapas `Record<Variant,
+string>` (estilo CVA manual). Componentes en `src/components/ui/`: `Button`/`ButtonLink`
+(variantes primary/secondary/ghost, tamaños sm/md/lg), `Card` (con `interactive`), `Section`
+(header opcional eyebrow+título+descripción), `Eyebrow`, `Badge` (neutral/accent), `Prose`
+(texto largo, estilos `.prose-cadence` en globals). Si más adelante hace falta accesibilidad
+compleja (menús, dialogs), se reevalúa Radix puntualmente.
+
+### Polimorfismo Button: dos componentes, no `as`
+En vez de un Button polimórfico con tipos complejos, hay `Button` (renderiza `<button>`) y
+`ButtonLink` (renderiza el `Link` de next-intl) compartiendo `buttonStyles()`. Más simple y
+type-safe. La escala tipográfica se usa con utilidades Tailwind directas (documentada en globals.css
+sobre `.prose-cadence`), sin componentes Heading/Text dedicados.
+
 ### Tailwind v4 (config CSS-first)
 Sin `tailwind.config.ts`: el tema se define con `@theme` en `src/styles/globals.css` y el dark
 mode con `@custom-variant dark (&:where(.dark, .dark *))` (estrategia de clase). Es la versión
@@ -227,18 +242,21 @@ color de marca (componente `ScreenshotPlaceholder`), reemplazables cuando Iván 
 
 ## 7. Estado actual
 
-- **Fase activa**: **Fase 1 completada** ✅ (2026-06-13). Próximo: Fase 2 (sistema de tipografía
-  y paleta en componentes base) — pendiente de armar TODOs y confirmación de Iván.
+- **Fase activa**: **Fase 2 completada** ✅ (2026-06-13). Próximo: Fase 3 (Home con contenido
+  placeholder ES/EN) — pendiente de armar TODOs y confirmación de Iván.
 - **Completado**:
   - Descubrimiento (sección 11) y decisiones acordadas con Iván.
   - Fase 0: brand kit copiado a `public/` (favicon, manifest, `/brand/`), fuente a `src/fonts/`.
   - Fase 1: scaffold Next 16 + TS strict + Tailwind v4 + next-intl + tema sin FOUC; layout raíz,
     Header (logo, switch idioma, toggle tema), Footer, árbol de 7 rutas × 2 idiomas con
-    placeholders, redirect de raíz. Verificado: lint y TS limpios, build estático (16 páginas),
-    dev server sirviendo i18n correcto.
-- **Sigue**: Fase 2.
-- **Pendientes diferidos**: screenshots de Metronome a WebP (Fase 4, cuando se usen);
-  capturas reales de Polypulse (las provee Iván).
+    placeholders, redirect de raíz.
+  - Fase 2: sistema visual y componentes base — escala tipográfica, `Button`/`ButtonLink`, `Card`,
+    `Section`, `Eyebrow`, `Badge`, `Prose` (+ `.prose-cadence`), helper `cn`. Validado visualmente
+    en claro y oscuro (Edge headless). Página `/[locale]/styleguide` como dev aid (noindex).
+- **Sigue**: Fase 3.
+- **Pendientes diferidos**:
+  - Quitar `src/app/[locale]/styleguide/` antes de producción (Fase 8) y excluirla del sitemap (Fase 7).
+  - Screenshots de Metronome a WebP (Fase 4, cuando se usen); capturas reales de Polypulse (las provee Iván).
 
 ### Plan de fases
 
