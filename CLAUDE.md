@@ -33,8 +33,12 @@ plataforma compleja. Tono de referencia: estudios independientes con personalida
 
 - **Node**: v24 (entorno de desarrollo actual).
 - **Output**: `output: 'export'` — HTML/CSS/JS estático, sin servidor.
-- **Deploy**: Cloudflare Pages conectado al repo de GitHub. Dominio `cadencegallery.com`
-  (registrado en Cloudflare; sin DNS apuntando todavía).
+- **Deploy**: **Cloudflare Workers (Static Assets)** conectado al repo de GitHub (no Pages: el
+  asistente nuevo de Cloudflare encamina a Workers). Config en `wrangler.jsonc` (`assets.directory:
+  ./out`, `not_found_handling: 404-page`); build `npm run build`, deploy `npx wrangler deploy`,
+  Node fijado con `.nvmrc` (24). **En producción** desde 2026-06-13 en `https://cadencegallery.com`
+  (apex como custom domain del Worker; `www` → 301 al apex vía Redirect Rule). Auto-deploy en cada
+  push a `main`.
 
 ---
 
@@ -262,9 +266,8 @@ color de marca (componente `ScreenshotPlaceholder`), reemplazables cuando Iván 
 
 ## 7. Estado actual
 
-- **Fase activa**: **Fase 8 en curso** — repo preparado para deploy (2026-06-13). Falta la parte
-  de Cloudflare (conectar Pages + DNS del dominio), que ejecuta Iván desde su cuenta — **solo con
-  autorización explícita**. Después: Fase 9 (pulido visual).
+- **Fase activa**: **Fase 8 completada** ✅ (2026-06-13) — **sitio en producción** en
+  `https://cadencegallery.com`. Próximo: Fase 9 (pulido visual).
 - **Completado**:
   - Descubrimiento (sección 11) y decisiones acordadas con Iván.
   - Fase 0: brand kit copiado a `public/` (favicon, manifest, `/brand/`), fuente a `src/fonts/`.
@@ -332,8 +335,16 @@ color de marca (componente `ScreenshotPlaceholder`), reemplazables cuando Iván 
     `sitemap.ts`); build de producción verificado (`/out` con `index.html` redirect, `404.html`,
     `robots.txt`, `sitemap.xml` de 26 URLs). Runbook de deploy en `docs/phases/phase-8.md` (params
     de Cloudflare Pages: branch `main`, build `npm run build`, output `out`, Node 24; DNS del dominio;
-    checklist de validación en preview). Falta solo la ejecución en Cloudflare por parte de Iván.
-- **Sigue**: Fase 8 — ejecución en Cloudflare (con autorización) → luego Fase 9 (pulido).
+    checklist de validación en preview). Nota: el runbook asumía Pages, pero el deploy real se hizo
+    con **Workers (Static Assets)** — ver §2/§6.
+  - Fase 8 — deploy (2026-06-13): desplegado con **Cloudflare Workers (Static Assets)** (el asistente
+    nuevo encamina a Workers, no Pages). Se añadió `wrangler.jsonc` (`assets.directory: ./out`,
+    `not_found_handling: 404-page`) y `.nvmrc` (24); build `npm run build`, deploy `npx wrangler
+    deploy`, conectado a GitHub (auto-deploy en push a `main`). Custom domain `cadencegallery.com`
+    (apex) activo con SSL; `www` → 301 al apex vía Redirect Rule (Wildcard `https://www…/*` →
+    `https://cadencegallery.com/${1}`). Validado en vivo: rutas 200, 404 propia, robots/sitemap,
+    assets (webp/og/favicon), redirect raíz y www. Iván ejecutó la parte de Cloudflare; Claude guió.
+- **Sigue**: Fase 9 (pulido visual: animaciones sutiles, micro-interacciones).
 - **Pendientes diferidos**:
   - Iván puede ajustar el copy de apps y home (lo redactó Claude) cuando lo lea en el sitio.
   - Si Iván corrige el mojibake de Polypulse en la app, reintegrar la captura de Library (y otras) al sitio.
@@ -371,8 +382,9 @@ npm run lint           # ESLint
 npx serve out          # preview local del export estático
 ```
 
-Deploy: Cloudflare Pages toma el build de `/out` desde el repo de GitHub. No publicar a
-producción sin autorización explícita de Iván (los entornos preview de Cloudflare sí se pueden usar).
+Deploy: Cloudflare Workers (Static Assets) toma el build de `/out` desde el repo de GitHub
+(`wrangler.jsonc` + `npx wrangler deploy`). Ya en producción en `cadencegallery.com`; cada push a
+`main` redespliega solo. URL de preview del Worker: `cadencegallery.ivanflb.workers.dev`.
 
 ---
 
