@@ -12,6 +12,7 @@ export function AppsSection() {
       title={t('title')}
       description={t('description')}
       className="border-t border-border"
+      reveal
     >
       <div className="grid gap-6 sm:grid-cols-2">
         <AppCard

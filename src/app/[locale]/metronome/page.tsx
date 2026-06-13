@@ -76,7 +76,7 @@ export default async function MetronomePage({ params }: Props) {
         }
       />
 
-      <Section eyebrow={t('description.eyebrow')} title={t('description.title')}>
+      <Section eyebrow={t('description.eyebrow')} title={t('description.title')} reveal>
         <div className="max-w-2xl space-y-4">
           {paragraphs.map((paragraph) => (
             <p key={paragraph.slice(0, 24)} className="text-lg leading-relaxed text-text-muted">
@@ -90,6 +90,7 @@ export default async function MetronomePage({ params }: Props) {
         eyebrow={t('features.eyebrow')}
         title={t('features.title')}
         className="border-t border-border"
+        reveal
       >
         <FeatureGrid items={features} />
       </Section>
@@ -98,6 +99,7 @@ export default async function MetronomePage({ params }: Props) {
         eyebrow={t('screenshots.eyebrow')}
         title={t('screenshots.title')}
         className="border-t border-border"
+        reveal
       >
         <ScreenshotGallery>
           {(

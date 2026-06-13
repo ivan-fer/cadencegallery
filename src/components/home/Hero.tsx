@@ -23,15 +23,24 @@ export function Hero() {
           aria-hidden="true"
           width={64}
           height={64}
-          className="h-16 w-16"
+          className="h-16 w-16 animate-fade-up"
         />
-        <h1 className="mt-8 text-4xl font-extrabold tracking-tight text-text sm:text-6xl">
+        <h1
+          className="mt-8 animate-fade-up text-4xl font-extrabold tracking-tight text-text sm:text-6xl"
+          style={{ animationDelay: '80ms' }}
+        >
           Cadence <span className="text-gallery">Gallery</span>
         </h1>
-        <p className="mt-5 max-w-xl text-lg leading-relaxed text-text-muted sm:text-xl">
+        <p
+          className="mt-5 max-w-xl animate-fade-up text-lg leading-relaxed text-text-muted sm:text-xl"
+          style={{ animationDelay: '160ms' }}
+        >
           {t('tagline')}
         </p>
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+        <div
+          className="mt-8 flex animate-fade-up flex-wrap items-center justify-center gap-3"
+          style={{ animationDelay: '240ms' }}
+        >
           <ButtonLink href="/metronome" variant="primary" size="lg">
             {t('ctaMetronome')}
           </ButtonLink>

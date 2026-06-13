@@ -12,6 +12,7 @@ export function AboutSection() {
       eyebrow={t('eyebrow')}
       title={t('title')}
       className="border-t border-border"
+      reveal
     >
       <div className="max-w-2xl">
         <p className="text-lg leading-relaxed text-text-muted">{t('body')}</p>

@@ -6,7 +6,7 @@ type Variant = 'primary' | 'secondary' | 'ghost';
 type Size = 'sm' | 'md' | 'lg';
 
 const base =
-  'inline-flex items-center justify-center gap-2 rounded-lg font-semibold transition-colors disabled:pointer-events-none disabled:opacity-50';
+  'inline-flex items-center justify-center gap-2 rounded-lg font-semibold transition duration-200 ease-cadence-out active:scale-[0.97] disabled:pointer-events-none disabled:opacity-50';
 
 const VARIANTS: Record<Variant, string> = {
   // Texto blanco sobre magenta: contraste holgado (ver nota de a11y en CLAUDE §5).

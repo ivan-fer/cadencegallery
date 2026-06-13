@@ -54,7 +54,9 @@ export const dynamicParams = false;
 
 // Aplica la clase `dark` y el color-scheme antes del primer paint para evitar
 // el flash de tema incorrecto (FOUC) en un sitio estático que arranca en claro.
-const themeScript = `(function(){try{var s=localStorage.getItem('theme');var d=s?s==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;var e=document.documentElement;if(d)e.classList.add('dark');e.style.colorScheme=d?'dark':'light';}catch(_){}})();`;
+// Marca `js` en <html>: el scroll-reveal solo oculta contenido cuando hay JS,
+// así sin JS (o si falla la hidratación) todo queda visible. Ver `.reveal` en globals.css.
+const themeScript = `(function(){var e=document.documentElement;e.classList.add('js');try{var s=localStorage.getItem('theme');var d=s?s==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;if(d)e.classList.add('dark');e.style.colorScheme=d?'dark':'light';}catch(_){}})();`;
 
 type LocaleLayoutProps = {
   children: React.ReactNode;

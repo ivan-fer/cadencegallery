@@ -228,6 +228,16 @@ Script bloqueante inline en `<head>` (antes del paint) que lee `localStorage` +
 `prefers-color-scheme` y aplica la clase `dark` en `<html>`. Persistencia en `localStorage`,
 respeto a `prefers-color-scheme` en primera visita. Toggle accesible (sol/luna) en el header.
 
+### Animaciones sin librería; scroll-reveal robusto sin JS (Fase 9)
+Sin Framer Motion ni similares: el movimiento se resuelve con CSS (keyframes + transiciones) y un
+único componente `Reveal` con `IntersectionObserver`. Clave del scroll-reveal: el estado oculto
+(`.reveal { opacity:0; translateY }`) **solo se aplica bajo la clase `.js`** que el script inline
+anti-FOUC añade a `<html>` antes del paint; así, si no hay JS (o falla la hidratación), el contenido
+queda visible y no se pierde. `prefers-reduced-motion` ya neutraliza duraciones/delays globalmente
+(incluido `animation-delay`, añadido en Fase 9 para el stagger del hero), y además fuerza
+`.reveal`/`.phoneshot-fade` a visibles. El hero anima en CSS puro (no depende de JS) porque está
+above-the-fold. Easing centralizado en dos tokens (`--ease-cadence`, `--ease-cadence-out`).
+
 ### Imágenes en static export
 `images: { unoptimized: true }`, `trailingSlash: true`. Sin optimización dinámica de `next/image`.
 Screenshots pre-optimizadas a **WebP** a mano (con `sharp`, no hay ImageMagick/cwebp en el
@@ -266,8 +276,8 @@ color de marca (componente `ScreenshotPlaceholder`), reemplazables cuando Iván 
 
 ## 7. Estado actual
 
-- **Fase activa**: **Fase 8 completada** ✅ (2026-06-13) — **sitio en producción** en
-  `https://cadencegallery.com`. Próximo: Fase 9 (pulido visual).
+- **Fase activa**: **Fase 9 completada** ✅ (2026-06-13) — **pulido visual** (animaciones
+  sutiles + micro-interacciones). Sitio en producción en `https://cadencegallery.com`.
 - **Completado**:
   - Descubrimiento (sección 11) y decisiones acordadas con Iván.
   - Fase 0: brand kit copiado a `public/` (favicon, manifest, `/brand/`), fuente a `src/fonts/`.
@@ -344,7 +354,27 @@ color de marca (componente `ScreenshotPlaceholder`), reemplazables cuando Iván 
     (apex) activo con SSL; `www` → 301 al apex vía Redirect Rule (Wildcard `https://www…/*` →
     `https://cadencegallery.com/${1}`). Validado en vivo: rutas 200, 404 propia, robots/sitemap,
     assets (webp/og/favicon), redirect raíz y www. Iván ejecutó la parte de Cloudflare; Claude guió.
-- **Sigue**: Fase 9 (pulido visual: animaciones sutiles, micro-interacciones).
+  - Fase 9 (pulido visual, 2026-06-13): animaciones sutiles + micro-interacciones, intensidad
+    "notoria pero elegante" (acordado con Iván). **Tokens de movimiento** en globals.css
+    (`--ease-cadence` con leve overshoot para entradas/hovers, `--ease-cadence-out` para
+    color/estado → utilidades `ease-cadence`/`ease-cadence-out`). **Scroll-reveal**: componente
+    `src/components/ui/Reveal.tsx` (client, `IntersectionObserver`, one-shot, fade-up de 28px);
+    el ocultamiento inicial vive en CSS (`.reveal`, solo activo bajo la clase `.js` que añade el
+    script anti-FOUC) → **sin JS el contenido queda siempre visible**, y `prefers-reduced-motion`
+    lo neutraliza. `Section` ganó un prop opt-in `reveal` que envuelve header y cuerpo con stagger
+    (90ms); activado en home (apps, latest, about) y en las 3 secciones clave de cada app
+    (descripción, features, capturas). **Hero del home**: entrada escalonada al cargar
+    (`animate-fade-up` + `animation-delay` 0/80/160/240ms; corre en CSS, no depende de JS).
+    **Micro-interacciones**: botones con feedback de pulsación (`active:scale-[0.97]`) y easing
+    unificado; `ThemeToggle` con crossfade + rotación sol/luna (ambos iconos montados); galería de
+    capturas con lift al hover (`group-hover:-translate-y-1.5`) y **fade-in al decodificar la
+    imagen** en `PhoneShot` (ahora client; `.phoneshot-fade`, anti pop-in, excepto la captura
+    `priority` del hero); `Header` ahora client, con sombra sutil y borde que aparecen al hacer
+    scroll (`scrollY > 8`). Validado: lint/TS/build limpios (30 páginas), captura headless de home
+    y `/metronome` en claro (ES) con contenido revelado OK. Oscuro: todos los cambios son sobre
+    tokens semánticos/opacidad/transform (sin colores nuevos) → hereda los tokens ya validados.
+- **Sigue**: el sitio está completo (fases 0–9). Pulidos puntuales y nuevas capturas/contenido
+  según los aporte Iván.
 - **Pendientes diferidos**:
   - Iván puede ajustar el copy de apps y home (lo redactó Claude) cuando lo lea en el sitio.
   - Si Iván corrige el mojibake de Polypulse en la app, reintegrar la captura de Library (y otras) al sitio.

@@ -14,6 +14,7 @@ export function LatestSection() {
       eyebrow={t('eyebrow')}
       title={t('title')}
       className="border-t border-border"
+      reveal
     >
       <ul className="max-w-3xl">
         {items.map((item) => (

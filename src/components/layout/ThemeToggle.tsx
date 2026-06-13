@@ -3,6 +3,7 @@
 import { Moon, Sun } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useSyncExternalStore } from 'react';
+import { cn } from '@/lib/cn';
 
 // El tema vive en el DOM (clase `dark` en <html>, aplicada por el script inline
 // del layout sin FOUC). Lo leemos con useSyncExternalStore para reflejarlo tras
@@ -45,13 +46,23 @@ export function ThemeToggle() {
       type="button"
       onClick={toggle}
       aria-label={dark ? t('switchToLight') : t('switchToDark')}
-      className="inline-flex size-9 items-center justify-center rounded-md text-text-muted transition-colors hover:bg-surface hover:text-text"
+      className="relative inline-flex size-9 items-center justify-center rounded-md text-text-muted transition-colors hover:bg-surface hover:text-text"
     >
-      {dark ? (
-        <Sun className="size-[18px]" aria-hidden="true" />
-      ) : (
-        <Moon className="size-[18px]" aria-hidden="true" />
-      )}
+      {/* Ambos iconos montados; crossfade + rotación al alternar el tema. */}
+      <Sun
+        className={cn(
+          'absolute size-[18px] transition-all duration-300 ease-cadence',
+          dark ? 'rotate-0 scale-100 opacity-100' : '-rotate-90 scale-50 opacity-0',
+        )}
+        aria-hidden="true"
+      />
+      <Moon
+        className={cn(
+          'absolute size-[18px] transition-all duration-300 ease-cadence',
+          dark ? 'rotate-90 scale-50 opacity-0' : 'rotate-0 scale-100 opacity-100',
+        )}
+        aria-hidden="true"
+      />
     </button>
   );
 }

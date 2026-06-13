@@ -70,6 +70,18 @@
   --color-neutral-900: #1a1320;
 }
 
+/* ------------------------------------------------------------------ */
+/* Movimiento (Fase 9). Easing y duraciones comunes para que todas las  */
+/* micro-interacciones respiren igual. Genera utilidades `ease-cadence` */
+/* y `ease-cadence-out` en Tailwind.                                    */
+/* ------------------------------------------------------------------ */
+@theme {
+  /* Salida suave con leve overshoot — para entradas y hovers. */
+  --ease-cadence: cubic-bezier(0.22, 1, 0.36, 1);
+  /* Salida estándar — para transiciones de color/estado. */
+  --ease-cadence-out: cubic-bezier(0.33, 1, 0.68, 1);
+}
+
 @layer base {
   html {
     -webkit-text-size-adjust: 100%;
@@ -88,15 +100,74 @@
     border-radius: 2px;
   }
 
+  /* ---------------------------------------------------------------- */
+  /* Scroll-reveal (Fase 9). El componente <Reveal /> marca elementos   */
+  /* con `.reveal` y les pone `.is-visible` al entrar en viewport.       */
+  /* Solo se ocultan cuando hay JS (clase `.js` en <html>): sin JS el    */
+  /* contenido queda siempre visible.                                    */
+  /* ---------------------------------------------------------------- */
+  .js .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition:
+      opacity 0.7s var(--ease-cadence),
+      transform 0.7s var(--ease-cadence);
+    will-change: opacity, transform;
+  }
+  .js .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Fade-in de capturas al decodificar (anti pop-in). Solo con JS; sin JS
+     la imagen queda visible. Lo activa <PhoneShot> en sus variantes lazy. */
+  .js .phoneshot-fade {
+    opacity: 0;
+    transition: opacity 0.6s var(--ease-cadence-out);
+  }
+  .js .phoneshot-fade.is-loaded {
+    opacity: 1;
+  }
+
   @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
     *::after {
       animation-duration: 0.01ms !important;
+      animation-delay: 0ms !important;
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
       scroll-behavior: auto !important;
     }
+
+    /* Sin movimiento: el contenido aparece directamente, nunca oculto. */
+    .js .reveal,
+    .js .phoneshot-fade {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Entrada del hero (Fase 9): fade-up al cargar, escalonado por         */
+/* `animation-delay` inline. Corre en CSS (no depende de JS); termina    */
+/* visible, y reduced-motion lo neutraliza vía la regla global de arriba.*/
+/* ------------------------------------------------------------------ */
+@keyframes cadence-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@layer utilities {
+  .animate-fade-up {
+    animation: cadence-fade-up 0.7s var(--ease-cadence) both;
   }
 }
 
