@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cadence Gallery</title>
+    <link rel="canonical" href="https://cadencegallery.com/es/" />
+    <link rel="alternate" hreflang="es" href="https://cadencegallery.com/es/" />
+    <link rel="alternate" hreflang="en" href="https://cadencegallery.com/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://cadencegallery.com/es/" />
+    <!--
+      Redirección de la raíz `/`. No hay middleware en static export, así que
+      resolvemos el idioma acá: preferencia guardada > idioma del navegador > es.
+      El <meta refresh> es el fallback sin JavaScript (siempre a /es/).
+    -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('locale');
+          var nav = (navigator.language || 'es').slice(0, 2).toLowerCase();
+          var locale = saved === 'en' || saved === 'es' ? saved : nav === 'en' ? 'en' : 'es';
+          window.location.replace('/' + locale + '/');
+        } catch (_) {
+          window.location.replace('/es/');
+        }
+      })();
+    </script>
+    <meta http-equiv="refresh" content="0; url=/es/" />
+  </head>
+  <body>
+    <p>Redirigiendo a <a href="/es/">Cadence Gallery</a>…</p>
+  </body>
+</html>

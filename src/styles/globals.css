@@ -1,0 +1,101 @@
+@import 'tailwindcss';
+
+/* Dark mode por clase (.dark en <html>), estrategia `selector`. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ------------------------------------------------------------------ */
+/* Tokens de tema: cambian entre claro y oscuro vía variables CSS.     */
+/* Derivados del brand kit (design/brand/cadence_brand.html) y del     */
+/* sistema de diseño definido en CLAUDE.md §5.                          */
+/* ------------------------------------------------------------------ */
+:root {
+  --bg: #fafafa;
+  --surface: #ffffff;
+  --border: #ececec;
+  --divider: #f0f0f0;
+  --text: #1d1626;
+  --text-muted: #6a6276;
+  --text-subtle: #9a92a6;
+  --accent: #c42ba6;
+  --accent-hover: #e24fcb;
+}
+
+.dark {
+  --bg: #241826;
+  --surface: #2d2033;
+  --border: #3a2b40;
+  --divider: #33263a;
+  --text: #f0eff2;
+  --text-muted: #c9c5d0;
+  --text-subtle: #9a92a6;
+  --accent: #e24fcb;
+  --accent-hover: #c42ba6;
+}
+
+/* Exponer los tokens a Tailwind como utilidades (bg-bg, text-text, …). */
+/* `inline` hace que las utilidades referencien la var → responden a .dark. */
+@theme inline {
+  --font-sans: var(--font-manrope), system-ui, sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+
+  /* Semánticos (claro/oscuro) */
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+  --color-divider: var(--divider);
+  --color-text: var(--text);
+  --color-text-muted: var(--text-muted);
+  --color-text-subtle: var(--text-subtle);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+
+  /* Marca (valores fijos) */
+  --color-berenjena: #241826;
+  --color-morado: #6e2c8f;
+  --color-magenta: #c42ba6;
+  --color-magenta-light: #e24fcb;
+  --color-gallery: #9a55c4;
+  --color-tinta: #1a1320;
+
+  /* Escala neutra (violeta-desaturada) */
+  --color-neutral-50: #fafafa;
+  --color-neutral-100: #f0eff2;
+  --color-neutral-200: #e3e1e7;
+  --color-neutral-300: #c9c5d0;
+  --color-neutral-400: #9a92a6;
+  --color-neutral-500: #6a6276;
+  --color-neutral-600: #4a4356;
+  --color-neutral-700: #332c3d;
+  --color-neutral-800: #241826;
+  --color-neutral-900: #1a1320;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Anillo de foco accesible y consistente. */
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}

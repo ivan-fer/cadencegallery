@@ -1,0 +1,38 @@
+{
+  "site": {
+    "name": "Cadence Gallery",
+    "tagline": "Practice tools for musicians, crafted with care."
+  },
+  "nav": {
+    "metronome": "Metronome",
+    "polypulse": "Polypulse",
+    "guides": "Guides",
+    "privacy": "Privacy",
+    "terms": "Terms"
+  },
+  "header": {
+    "skipToContent": "Skip to content",
+    "home": "Cadence Gallery — Home",
+    "primaryNav": "Primary navigation"
+  },
+  "theme": {
+    "toggle": "Toggle theme",
+    "switchToDark": "Switch to dark theme",
+    "switchToLight": "Switch to light theme"
+  },
+  "locale": {
+    "label": "Change language",
+    "es": "Spanish",
+    "en": "English"
+  },
+  "footer": {
+    "tagline": "The home of the Cadence apps.",
+    "legal": "Legal",
+    "apps": "Apps",
+    "copyright": "© {year} Cadence Gallery"
+  },
+  "placeholder": {
+    "comingSoon": "Under construction",
+    "note": "This page will be completed in an upcoming phase."
+  }
+}
